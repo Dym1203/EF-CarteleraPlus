@@ -25,6 +25,9 @@ public final class FragmentMovieDetailBinding implements ViewBinding {
   public final MaterialButton btnAddFavorite;
 
   @NonNull
+  public final MaterialButton btnRemoveFavorite;
+
+  @NonNull
   public final ImageView imgDetalleMoviePosterPath;
 
   @NonNull
@@ -40,11 +43,13 @@ public final class FragmentMovieDetailBinding implements ViewBinding {
   public final TextView tvDetallesMovie;
 
   private FragmentMovieDetailBinding(@NonNull ConstraintLayout rootView,
-      @NonNull MaterialButton btnAddFavorite, @NonNull ImageView imgDetalleMoviePosterPath,
-      @NonNull TextView tvDetalleMovieReleaseDate, @NonNull TextView tvDetalleMovieTitle,
-      @NonNull TextView tvDetalleMovieVoteAverage, @NonNull TextView tvDetallesMovie) {
+      @NonNull MaterialButton btnAddFavorite, @NonNull MaterialButton btnRemoveFavorite,
+      @NonNull ImageView imgDetalleMoviePosterPath, @NonNull TextView tvDetalleMovieReleaseDate,
+      @NonNull TextView tvDetalleMovieTitle, @NonNull TextView tvDetalleMovieVoteAverage,
+      @NonNull TextView tvDetallesMovie) {
     this.rootView = rootView;
     this.btnAddFavorite = btnAddFavorite;
+    this.btnRemoveFavorite = btnRemoveFavorite;
     this.imgDetalleMoviePosterPath = imgDetalleMoviePosterPath;
     this.tvDetalleMovieReleaseDate = tvDetalleMovieReleaseDate;
     this.tvDetalleMovieTitle = tvDetalleMovieTitle;
@@ -85,6 +90,12 @@ public final class FragmentMovieDetailBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.btnRemoveFavorite;
+      MaterialButton btnRemoveFavorite = ViewBindings.findChildViewById(rootView, id);
+      if (btnRemoveFavorite == null) {
+        break missingId;
+      }
+
       id = R.id.imgDetalleMoviePosterPath;
       ImageView imgDetalleMoviePosterPath = ViewBindings.findChildViewById(rootView, id);
       if (imgDetalleMoviePosterPath == null) {
@@ -116,8 +127,8 @@ public final class FragmentMovieDetailBinding implements ViewBinding {
       }
 
       return new FragmentMovieDetailBinding((ConstraintLayout) rootView, btnAddFavorite,
-          imgDetalleMoviePosterPath, tvDetalleMovieReleaseDate, tvDetalleMovieTitle,
-          tvDetalleMovieVoteAverage, tvDetallesMovie);
+          btnRemoveFavorite, imgDetalleMoviePosterPath, tvDetalleMovieReleaseDate,
+          tvDetalleMovieTitle, tvDetalleMovieVoteAverage, tvDetallesMovie);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

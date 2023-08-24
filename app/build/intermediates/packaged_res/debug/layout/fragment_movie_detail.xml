@@ -100,9 +100,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Añadir a Favoritos"
-        android:layout_marginTop="90dp"
+        android:layout_marginTop="45dp"
         android:layout_marginRight="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/imgDetalleMoviePosterPath" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnRemoveFavorite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quitar de Favoritos"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="15dp"
+        android:backgroundTint="#EE463E"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnAddFavorite" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

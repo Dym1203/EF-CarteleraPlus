@@ -49,14 +49,25 @@ class MovieDetailFragment : Fragment() {
             .into(binding.imgDetalleMoviePosterPath)
 
         /*Favoritos*/
-        if (movie.isFavorite) {
+        if (!movie.isFavorite) {
+            binding.btnRemoveFavorite.visibility = View.GONE
+            binding.btnAddFavorite.visibility = View.VISIBLE
+        }
+        else {
             binding.btnAddFavorite.visibility = View.GONE
+            binding.btnRemoveFavorite.visibility = View.VISIBLE
         }
 
         binding.btnAddFavorite.setOnClickListener {
             movie.isFavorite = true
             viewModel.addMoviesFavorites(movie)
             Snackbar.make(binding.root, "¡Película agregada a Favoritos!", Snackbar.LENGTH_SHORT).show()
+        }
+
+        binding.btnRemoveFavorite.setOnClickListener {
+            movie.isFavorite = false
+            viewModel.removeMovieFromFavorites(movie)
+            Snackbar.make(binding.root, "¡Película eliminada de Favoritos!", Snackbar.LENGTH_SHORT).show()
         }
     }
 

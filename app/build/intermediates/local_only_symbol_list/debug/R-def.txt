@@ -112,6 +112,7 @@ id btnGoogle
 id btnInformacion
 id btnLogin
 id btnRegistrarSerie
+id btnRemoveFavorite
 id btnSignUp
 id cpiPuntuacion
 id cpiPuntuacionSerie

@@ -3401,6 +3401,7 @@ id btnGoogle
 id btnInformacion
 id btnLogin
 id btnRegistrarSerie
+id btnRemoveFavorite
 id btnSignUp
 id butt
 id buttonPanel

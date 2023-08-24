@@ -22,4 +22,10 @@ class MovieDbRepository(private val db: MovieDatabase? = null) {
         }
     }
 
+    suspend fun removeMovieFromFavorites(movie : Movie) {
+        dao?.let {
+            dao.removeMovieFromFavorites(movie)
+        }
+    }
+
 }

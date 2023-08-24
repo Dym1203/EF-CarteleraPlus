@@ -23,4 +23,10 @@ class MovieDetailViewModel(application: Application): AndroidViewModel(applicati
         }
     }
 
+    fun removeMovieFromFavorites(movie : Movie) {
+        viewModelScope.launch(Dispatchers.IO) {
+            repository.removeMovieFromFavorites(movie)
+        }
+    }
+
 }

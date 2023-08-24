@@ -3,6 +3,7 @@ package com.ef.dylan.carteleraplus.data.db;
 import android.database.Cursor;
 import android.os.CancellationSignal;
 import androidx.room.CoroutinesRoom;
+import androidx.room.EntityDeletionOrUpdateAdapter;
 import androidx.room.EntityInsertionAdapter;
 import androidx.room.RoomDatabase;
 import androidx.room.RoomSQLiteQuery;
@@ -28,6 +29,8 @@ public final class MovieDao_Impl implements MovieDao {
   private final RoomDatabase __db;
 
   private final EntityInsertionAdapter<Movie> __insertionAdapterOfMovie;
+
+  private final EntityDeletionOrUpdateAdapter<Movie> __deletionAdapterOfMovie;
 
   public MovieDao_Impl(RoomDatabase __db) {
     this.__db = __db;
@@ -60,6 +63,17 @@ public final class MovieDao_Impl implements MovieDao {
         stmt.bindLong(6, _tmp);
       }
     };
+    this.__deletionAdapterOfMovie = new EntityDeletionOrUpdateAdapter<Movie>(__db) {
+      @Override
+      public String createQuery() {
+        return "DELETE FROM `movie` WHERE `id` = ?";
+      }
+
+      @Override
+      public void bind(SupportSQLiteStatement stmt, Movie value) {
+        stmt.bindLong(1, value.getId());
+      }
+    };
   }
 
   @Override
@@ -71,6 +85,24 @@ public final class MovieDao_Impl implements MovieDao {
         __db.beginTransaction();
         try {
           __insertionAdapterOfMovie.insert(movie);
+          __db.setTransactionSuccessful();
+          return Unit.INSTANCE;
+        } finally {
+          __db.endTransaction();
+        }
+      }
+    }, continuation);
+  }
+
+  @Override
+  public Object removeMovieFromFavorites(final Movie movie,
+      final Continuation<? super Unit> continuation) {
+    return CoroutinesRoom.execute(__db, true, new Callable<Unit>() {
+      @Override
+      public Unit call() throws Exception {
+        __db.beginTransaction();
+        try {
+          __deletionAdapterOfMovie.handle(movie);
           __db.setTransactionSuccessful();
           return Unit.INSTANCE;
         } finally {
