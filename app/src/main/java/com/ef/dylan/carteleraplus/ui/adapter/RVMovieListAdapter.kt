@@ -43,4 +43,5 @@ class MovieVH(private val binding : ItemMovieBinding, val onMovieClick: (Movie) 
             onMovieClick(movie)
         }
     }
+
 }

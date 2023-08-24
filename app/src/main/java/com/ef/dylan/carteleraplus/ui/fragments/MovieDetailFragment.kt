@@ -49,10 +49,13 @@ class MovieDetailFragment : Fragment() {
             .into(binding.imgDetalleMoviePosterPath)
 
         /*Favoritos*/
+        if (movie.isFavorite) {
+            binding.btnAddFavorite.visibility = View.GONE
+        }
+
         binding.btnAddFavorite.setOnClickListener {
             movie.isFavorite = true
             viewModel.addMoviesFavorites(movie)
-            binding.btnAddFavorite.visibility = View.GONE
             Snackbar.make(binding.root, "¡Película agregada a Favoritos!", Snackbar.LENGTH_SHORT).show()
         }
     }

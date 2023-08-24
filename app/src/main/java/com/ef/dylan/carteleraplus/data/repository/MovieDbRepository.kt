@@ -4,7 +4,7 @@ import com.ef.dylan.carteleraplus.data.db.MovieDao
 import com.ef.dylan.carteleraplus.data.db.MovieDatabase
 import com.ef.dylan.carteleraplus.model.Movie
 
-class MovieDbRepository(val db: MovieDatabase? = null) {
+class MovieDbRepository(private val db: MovieDatabase? = null) {
 
     private val dao : MovieDao? = db?.movieDao()
 
