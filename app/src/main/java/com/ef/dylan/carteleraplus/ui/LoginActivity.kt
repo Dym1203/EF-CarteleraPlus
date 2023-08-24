@@ -63,6 +63,16 @@ class LoginActivity : AppCompatActivity() {
                 }
             }
         }
+        /*Shared Preferences*/
+        val sharedPreferences = getSharedPreferences("user_prefs", Context.MODE_PRIVATE)
+        val userLoggedIn = sharedPreferences.getBoolean("user_logged_in", false)
+
+        if (userLoggedIn) {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
+
         binding.edtEmail.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
 
