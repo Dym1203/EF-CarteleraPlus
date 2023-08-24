@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "62501013303",
+    "project_id": "cartelera-plus",
+    "storage_bucket": "cartelera-plus.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:62501013303:android:0013172ac2bc7982d43cb2",
+        "android_client_info": {
+          "package_name": "com.ef.dylan.carteleraplus"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "62501013303-7es3d7iffm5e92ndvs5aa67aifs0aauq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ef.dylan.carteleraplus",
+            "certificate_hash": "7e2fb3ce840779a4c69836f721c45e077e6521a0"
+          }
+        },
+        {
+          "client_id": "62501013303-ptib1jcd1ortrp0j71jhak9aosciqceh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyClTPz1_tDK7S0r7y5VWXsXcjcElsxgZZg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "62501013303-ldkhkun75a2d31kt2cnjc7fii2fh5mdi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="#C5C6D0"
+    tools:context=".ui.fragments.MovieDetailFragment">
+
+    <TextView
+        android:id="@+id/tvDetallesMovie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/cabin"
+        android:text="Detalles de la Película"
+        android:layout_marginTop="16dp"
+        android:textColor="?attr/colorPrimary"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvDetalleMovieTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/cabin"
+        android:text="Película:"
+        android:layout_marginTop="32dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginLeft="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvDetallesMovie" />
+
+    <!-- <TextView
+        android:id="@+id/tvDetalleMovieOverview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/cabin"
+        android:text="Sinopsis:"
+        android:layout_marginTop="16dp"
+        android:textSize="18sp"
+        android:layout_marginLeft="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvDetalleMovieTitle" /> -->
+
+    <!--<TextView
+        android:id="@+id/tvDetalleMovieOriginalLanguage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/cabin"
+        android:text="Idioma Disponible:"
+        android:layout_marginTop="16dp"
+        android:textSize="18sp"
+        android:layout_marginLeft="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvDetalleMovieOverview" /> -->
+
+    <TextView
+        android:id="@+id/tvDetalleMovieVoteAverage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/cabin"
+        android:text="Puntuación:"
+        android:layout_marginTop="16dp"
+        android:textSize="18sp"
+        android:layout_marginLeft="15dp"
+        app:formattingPattern="%.1f"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvDetalleMovieTitle" />
+
+    <TextView
+        android:id="@+id/tvDetalleMovieReleaseDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/cabin"
+        android:text="Fecha de Estreno:"
+        android:layout_marginTop="16dp"
+        android:textSize="18sp"
+        android:layout_marginLeft="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvDetalleMovieVoteAverage" />
+
+    <ImageView
+        android:id="@+id/imgDetalleMoviePosterPath"
+        android:layout_width="220dp"
+        android:layout_height="320dp"
+        android:layout_marginTop="48dp"
+        android:contentDescription="@null"
+        android:src="@drawable/poster"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvDetalleMovieReleaseDate" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnAddFavorite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Añadir a Favoritos"
+        android:layout_marginTop="90dp"
+        android:layout_marginRight="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgDetalleMoviePosterPath" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

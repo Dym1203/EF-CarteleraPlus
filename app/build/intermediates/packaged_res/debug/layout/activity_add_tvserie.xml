@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="#C5C6D0"
+    tools:context=".ui.AddTVSerieActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="16dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvAgregarTVSerie"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/cabin"
+                android:text="Agregar Serie de TV"
+                android:layout_marginTop="16dp"
+                android:textColor="?attr/colorPrimary"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvTitulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Título"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/cabin"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvAgregarTVSerie"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="16dp"
+                android:drawableStart="@drawable/ic_title"
+                android:drawablePadding="8dp"/>
+
+            <EditText
+                android:id="@+id/edtTitulo"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_width="380dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="15dp"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:maxLines="1"
+                android:background="@drawable/custom_input"
+                android:fontFamily="@font/cabin"
+                android:inputType="text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvTitulo" />
+
+            <LinearLayout
+                android:id="@+id/llCountryAndLanguage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintTop_toBottomOf="@id/edtTitulo">
+
+                <TextView
+                    android:id="@+id/tvPaisOrigen"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="País de Origen"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/cabin"
+                    android:layout_gravity="start"
+                    android:drawableStart="@drawable/ic_flag_country"
+                    android:drawablePadding="8dp" />
+
+                <EditText
+                    android:id="@+id/edtPaisOrigen"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="8dp"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:maxLines="1"
+                    android:background="@drawable/custom_input"
+                    android:fontFamily="@font/cabin"
+                    android:inputType="text"
+                    android:drawablePadding="8dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llOriginalLanguage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintTop_toBottomOf="@id/llCountryAndLanguage">
+
+                <TextView
+                    android:id="@+id/tvIdiomaOriginal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Idioma Original"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/cabin"
+                    android:layout_gravity="start"
+                    android:drawableStart="@drawable/ic_language"
+                    android:drawablePadding="8dp" />
+
+                <EditText
+                    android:id="@+id/edtIdiomaOriginal"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="8dp"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:maxLines="1"
+                    android:background="@drawable/custom_input"
+                    android:fontFamily="@font/cabin"
+                    android:inputType="text"
+                    android:drawablePadding="8dp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvSinopsis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sinopsis"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/cabin"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/llOriginalLanguage"
+                android:layout_marginTop="6dp"
+                android:layout_marginStart="16dp"
+                android:drawableStart="@drawable/ic_summary"
+                android:drawablePadding="8dp"/>
+
+            <EditText
+                android:id="@+id/edtSinopsis"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_width="380dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="15dp"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:background="@drawable/custom_input"
+                android:fontFamily="@font/cabin"
+                android:inputType="textMultiLine"
+                android:gravity="top|start"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvSinopsis" />
+
+            <LinearLayout
+                android:id="@+id/llSinopsis"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintTop_toBottomOf="@id/edtSinopsis">
+
+                <TextView
+                    android:id="@+id/tvPopularidad"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Popularidad"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/cabin"
+                    android:layout_gravity="start"
+                    android:drawableStart="@drawable/ic_popularity"
+                    android:drawablePadding="8dp"/>
+
+                <EditText
+                    android:id="@+id/edtPopularidad"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="8dp"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:maxLines="1"
+                    android:inputType="numberDecimal"
+                    android:background="@drawable/custom_input"
+                    android:fontFamily="@font/cabin" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llPuntuacion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintTop_toBottomOf="@id/llSinopsis">
+
+                <TextView
+                    android:id="@+id/tvPuntuacion"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Puntuación"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/cabin"
+                    android:layout_gravity="start"
+                    android:drawableStart="@drawable/ic_puntuation"
+                    android:drawablePadding="8dp"/>
+
+                <EditText
+                    android:id="@+id/edtPuntuacion"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="8dp"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:maxLines="1"
+                    android:inputType="numberDecimal"
+                    android:background="@drawable/custom_input"
+                    android:fontFamily="@font/cabin" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvPoster"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Póster"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/cabin"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/llPuntuacion"
+                android:layout_marginTop="28dp"
+                android:layout_marginStart="16dp"
+                android:drawableStart="@drawable/ic_poster"
+                android:drawablePadding="8dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnAgregarPoster"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Agregar Póster"
+                app:layout_constraintTop_toBottomOf="@id/llPuntuacion"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="150dp" />
+
+            <ImageView
+                android:id="@+id/imgImagenSeleccionada"
+                android:background="?attr/colorPrimary"
+                android:layout_width="200dp"
+                android:layout_height="250dp"
+                app:layout_constraintTop_toBottomOf="@id/tvPoster"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="32dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnRegistrarSerie"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:text="Registrar Serie de TV"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@id/imgImagenSeleccionada"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="42dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

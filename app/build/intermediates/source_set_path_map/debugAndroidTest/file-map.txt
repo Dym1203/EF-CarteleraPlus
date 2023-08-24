@@ -1,0 +1,9 @@
+com.ef.dylan.carteleraplus.test.app-annotation-experimental-1.3.0-0 C:\Users\Usuario\.gradle\caches\transforms-3\5f3d5784e5b4ddef8a620e3a497f3993\transformed\annotation-experimental-1.3.0\res
+com.ef.dylan.carteleraplus.test.app-core-1.5.0-1 C:\Users\Usuario\.gradle\caches\transforms-3\cd3c88ec01107f6069374bc53b4e6ffd\transformed\core-1.5.0\res
+com.ef.dylan.carteleraplus.test.app-androidTest-2 C:\Users\Usuario\Desktop\PROYECTOS DAM\Kotlin\EFCarteleraPlus\app\build\generated\res\resValues\androidTest\debug
+com.ef.dylan.carteleraplus.test.app-androidTest-3 C:\Users\Usuario\Desktop\PROYECTOS DAM\Kotlin\EFCarteleraPlus\app\build\generated\res\rs\androidTest\debug
+com.ef.dylan.carteleraplus.test.app-mergeDebugAndroidTestResources-4 C:\Users\Usuario\Desktop\PROYECTOS DAM\Kotlin\EFCarteleraPlus\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
+com.ef.dylan.carteleraplus.test.app-mergeDebugAndroidTestResources-5 C:\Users\Usuario\Desktop\PROYECTOS DAM\Kotlin\EFCarteleraPlus\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
+com.ef.dylan.carteleraplus.test.app-merged_res-6 C:\Users\Usuario\Desktop\PROYECTOS DAM\Kotlin\EFCarteleraPlus\app\build\intermediates\merged_res\debugAndroidTest
+com.ef.dylan.carteleraplus.test.app-androidTest-7 C:\Users\Usuario\Desktop\PROYECTOS DAM\Kotlin\EFCarteleraPlus\app\src\androidTest\res
+com.ef.dylan.carteleraplus.test.app-androidTestDebug-8 C:\Users\Usuario\Desktop\PROYECTOS DAM\Kotlin\EFCarteleraPlus\app\src\androidTestDebug\res

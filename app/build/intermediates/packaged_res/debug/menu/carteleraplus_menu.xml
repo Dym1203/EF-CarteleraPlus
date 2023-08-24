@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@id/movieListadoFragment"
+        android:title="Películas"
+        android:icon="@drawable/ic_movie_filter_24" />
+
+    <item android:id="@id/movieFavoriteFragment"
+        android:title="Favoritos"
+        android:icon="@drawable/ic_favorite_24" />
+
+    <item android:id="@id/firebaseMovieFragment"
+        android:title="Firebase"
+        android:icon="@drawable/ic_format_list_bulleted_24" />
+
+    <item android:id="@id/cuentaFragment"
+        android:title="Cuenta"
+        android:icon="@drawable/ic_account_circle_24" />
+
+</menu>

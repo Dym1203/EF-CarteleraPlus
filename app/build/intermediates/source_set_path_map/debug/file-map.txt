@@ -1,0 +1,65 @@
+com.ef.dylan.carteleraplus.app-lifecycle-viewmodel-savedstate-2.6.1-0 C:\Users\Usuario\.gradle\caches\transforms-3\0b6e599ef5d3528d6e1902916a8002eb\transformed\lifecycle-viewmodel-savedstate-2.6.1\res
+com.ef.dylan.carteleraplus.app-room-runtime-2.5.2-1 C:\Users\Usuario\.gradle\caches\transforms-3\1035cf97cf52715c9a289afe19ba7767\transformed\room-runtime-2.5.2\res
+com.ef.dylan.carteleraplus.app-constraintlayout-2.1.4-2 C:\Users\Usuario\.gradle\caches\transforms-3\16710ed0bcab791ddbc12e1b8f80c883\transformed\constraintlayout-2.1.4\res
+com.ef.dylan.carteleraplus.app-core-1.9.0-3 C:\Users\Usuario\.gradle\caches\transforms-3\17f8bc5000f6965735147bb53b155a9c\transformed\core-1.9.0\res
+com.ef.dylan.carteleraplus.app-play-services-auth-20.6.0-4 C:\Users\Usuario\.gradle\caches\transforms-3\1900cc05caad18302b7320886d69af29\transformed\play-services-auth-20.6.0\res
+com.ef.dylan.carteleraplus.app-sqlite-2.3.1-5 C:\Users\Usuario\.gradle\caches\transforms-3\192a677a7413162111fb562a323a2e4f\transformed\sqlite-2.3.1\res
+com.ef.dylan.carteleraplus.app-navigation-fragment-2.6.0-6 C:\Users\Usuario\.gradle\caches\transforms-3\1cae1778cb18a9a83a33313d46e62323\transformed\navigation-fragment-2.6.0\res
+com.ef.dylan.carteleraplus.app-window-1.0.0-7 C:\Users\Usuario\.gradle\caches\transforms-3\26ee6044376a2c90da2aa8e862656a7e\transformed\window-1.0.0\res
+com.ef.dylan.carteleraplus.app-navigation-ui-2.6.0-8 C:\Users\Usuario\.gradle\caches\transforms-3\2d941d4089c95e446db5ba57275a2d77\transformed\navigation-ui-2.6.0\res
+com.ef.dylan.carteleraplus.app-lifecycle-viewmodel-2.6.1-9 C:\Users\Usuario\.gradle\caches\transforms-3\2f23fea8aa698ec88706880bf9d4f2c8\transformed\lifecycle-viewmodel-2.6.1\res
+com.ef.dylan.carteleraplus.app-emoji2-1.2.0-10 C:\Users\Usuario\.gradle\caches\transforms-3\3a114f422657189e99fc6cbf2dfd2fdd\transformed\emoji2-1.2.0\res
+com.ef.dylan.carteleraplus.app-startup-runtime-1.1.1-11 C:\Users\Usuario\.gradle\caches\transforms-3\3a451dfe71dd36dcd334a4575d4521bb\transformed\startup-runtime-1.1.1\res
+com.ef.dylan.carteleraplus.app-fragment-1.6.0-12 C:\Users\Usuario\.gradle\caches\transforms-3\3bb9dce15e11a09466dd64137bf24e93\transformed\fragment-1.6.0\res
+com.ef.dylan.carteleraplus.app-activity-ktx-1.6.1-13 C:\Users\Usuario\.gradle\caches\transforms-3\486ebea200a1894643f6b709eaa0aee5\transformed\activity-ktx-1.6.1\res
+com.ef.dylan.carteleraplus.app-lifecycle-livedata-2.6.1-14 C:\Users\Usuario\.gradle\caches\transforms-3\4a21ad04c8743c4e1f5b51be581266e6\transformed\lifecycle-livedata-2.6.1\res
+com.ef.dylan.carteleraplus.app-cardview-1.0.0-15 C:\Users\Usuario\.gradle\caches\transforms-3\4a6b22d45e64e3de909a45b1a6323463\transformed\cardview-1.0.0\res
+com.ef.dylan.carteleraplus.app-room-ktx-2.5.2-16 C:\Users\Usuario\.gradle\caches\transforms-3\4ecfa9a8c09805e81079d96b663cf256\transformed\room-ktx-2.5.2\res
+com.ef.dylan.carteleraplus.app-lifecycle-runtime-2.6.1-17 C:\Users\Usuario\.gradle\caches\transforms-3\52530dce489d0feab7ff13c32751ed6d\transformed\lifecycle-runtime-2.6.1\res
+com.ef.dylan.carteleraplus.app-navigation-fragment-ktx-2.6.0-18 C:\Users\Usuario\.gradle\caches\transforms-3\57fdaafd9c2118029214e868d12eb0f3\transformed\navigation-fragment-ktx-2.6.0\res
+com.ef.dylan.carteleraplus.app-annotation-experimental-1.3.0-19 C:\Users\Usuario\.gradle\caches\transforms-3\5f3d5784e5b4ddef8a620e3a497f3993\transformed\annotation-experimental-1.3.0\res
+com.ef.dylan.carteleraplus.app-appcompat-1.6.1-20 C:\Users\Usuario\.gradle\caches\transforms-3\61bb4bffc7e75b56aea3bd44dbf49b10\transformed\appcompat-1.6.1\res
+com.ef.dylan.carteleraplus.app-CircularProgressIndicator-1.3.0-21 C:\Users\Usuario\.gradle\caches\transforms-3\61c7ee1e297e6c34be81046bfc9cbe4b\transformed\CircularProgressIndicator-1.3.0\res
+com.ef.dylan.carteleraplus.app-fragment-ktx-1.6.0-22 C:\Users\Usuario\.gradle\caches\transforms-3\6a7d0391ffb884fee06b1187fb8a25e5\transformed\fragment-ktx-1.6.0\res
+com.ef.dylan.carteleraplus.app-lifecycle-livedata-core-2.6.1-23 C:\Users\Usuario\.gradle\caches\transforms-3\6bab3677be57356175990380fe5f3c11\transformed\lifecycle-livedata-core-2.6.1\res
+com.ef.dylan.carteleraplus.app-core-ktx-1.9.0-24 C:\Users\Usuario\.gradle\caches\transforms-3\7596c3d3629689851a9ed1a3b22fba77\transformed\core-ktx-1.9.0\res
+com.ef.dylan.carteleraplus.app-transition-1.4.1-25 C:\Users\Usuario\.gradle\caches\transforms-3\79f62da3fe63a38d0c47601782bf2d06\transformed\transition-1.4.1\res
+com.ef.dylan.carteleraplus.app-navigation-runtime-2.6.0-26 C:\Users\Usuario\.gradle\caches\transforms-3\7fb326ffe4928f8f99da7c9325f83d8a\transformed\navigation-runtime-2.6.0\res
+com.ef.dylan.carteleraplus.app-drawerlayout-1.1.1-27 C:\Users\Usuario\.gradle\caches\transforms-3\8c17bc2e7f97c31d51f8c976a6a58e7a\transformed\drawerlayout-1.1.1\res
+com.ef.dylan.carteleraplus.app-play-services-basement-18.2.0-28 C:\Users\Usuario\.gradle\caches\transforms-3\8d0573b1456a5b92a7ebac1dde38abd3\transformed\play-services-basement-18.2.0\res
+com.ef.dylan.carteleraplus.app-savedstate-1.2.1-29 C:\Users\Usuario\.gradle\caches\transforms-3\96df80146126506073ee13a4d2594bd1\transformed\savedstate-1.2.1\res
+com.ef.dylan.carteleraplus.app-sqlite-framework-2.3.1-30 C:\Users\Usuario\.gradle\caches\transforms-3\96f26f200750ac92afe4fc2c4101c5d7\transformed\sqlite-framework-2.3.1\res
+com.ef.dylan.carteleraplus.app-materialish-progress-1.7-31 C:\Users\Usuario\.gradle\caches\transforms-3\972bd951faae5230eaca8d6c99f6fa84\transformed\materialish-progress-1.7\res
+com.ef.dylan.carteleraplus.app-material-1.9.0-32 C:\Users\Usuario\.gradle\caches\transforms-3\a5318a80e5bb2e25e2f35e9bc30ab7b7\transformed\material-1.9.0\res
+com.ef.dylan.carteleraplus.app-core-runtime-2.2.0-33 C:\Users\Usuario\.gradle\caches\transforms-3\a58073d16d0f49d29ee456694e396645\transformed\core-runtime-2.2.0\res
+com.ef.dylan.carteleraplus.app-savedstate-ktx-1.2.1-34 C:\Users\Usuario\.gradle\caches\transforms-3\a6825a6ab886fa72d0571f5b25d4c217\transformed\savedstate-ktx-1.2.1\res
+com.ef.dylan.carteleraplus.app-library-1.5.6-35 C:\Users\Usuario\.gradle\caches\transforms-3\a699be6b55460ebe1860403327755a27\transformed\library-1.5.6\res
+com.ef.dylan.carteleraplus.app-browser-1.4.0-36 C:\Users\Usuario\.gradle\caches\transforms-3\acbdaddf214db3bf7c3658ed82638c61\transformed\browser-1.4.0\res
+com.ef.dylan.carteleraplus.app-emoji2-views-helper-1.2.0-37 C:\Users\Usuario\.gradle\caches\transforms-3\ade36b51152f9a3f5b5431bba5882a5e\transformed\emoji2-views-helper-1.2.0\res
+com.ef.dylan.carteleraplus.app-navigation-runtime-ktx-2.6.0-38 C:\Users\Usuario\.gradle\caches\transforms-3\aefdc0a15780ce00944f79f4add23d6a\transformed\navigation-runtime-ktx-2.6.0\res
+com.ef.dylan.carteleraplus.app-navigation-ui-ktx-2.6.0-39 C:\Users\Usuario\.gradle\caches\transforms-3\b04e36ad9045cd95d55f84f41d76c38b\transformed\navigation-ui-ktx-2.6.0\res
+com.ef.dylan.carteleraplus.app-lifecycle-runtime-ktx-2.6.1-40 C:\Users\Usuario\.gradle\caches\transforms-3\c08243efbf0c79ec4700111fa26ba874\transformed\lifecycle-runtime-ktx-2.6.1\res
+com.ef.dylan.carteleraplus.app-glide-4.15.1-41 C:\Users\Usuario\.gradle\caches\transforms-3\c093e0d8e013571a8f1fc39d5a6a9b02\transformed\glide-4.15.1\res
+com.ef.dylan.carteleraplus.app-coordinatorlayout-1.1.0-42 C:\Users\Usuario\.gradle\caches\transforms-3\c1f61fff0a5d45dc3844a80a7c752338\transformed\coordinatorlayout-1.1.0\res
+com.ef.dylan.carteleraplus.app-lifecycle-viewmodel-ktx-2.6.1-43 C:\Users\Usuario\.gradle\caches\transforms-3\c762bde79d753af9045b1fa28b35a533\transformed\lifecycle-viewmodel-ktx-2.6.1\res
+com.ef.dylan.carteleraplus.app-navigation-common-2.6.0-44 C:\Users\Usuario\.gradle\caches\transforms-3\ce33e26ec3d16be25e5d3538532e06fd\transformed\navigation-common-2.6.0\res
+com.ef.dylan.carteleraplus.app-play-services-base-18.0.1-45 C:\Users\Usuario\.gradle\caches\transforms-3\ce7c1a52c84dd23d269dbbe32cefa14b\transformed\play-services-base-18.0.1\res
+com.ef.dylan.carteleraplus.app-firebase-common-20.3.3-46 C:\Users\Usuario\.gradle\caches\transforms-3\d09eb7acf9a217fb93084c7c177a3869\transformed\firebase-common-20.3.3\res
+com.ef.dylan.carteleraplus.app-profileinstaller-1.3.0-47 C:\Users\Usuario\.gradle\caches\transforms-3\d5f5d6437569114f2f4d722af518d63e\transformed\profileinstaller-1.3.0\res
+com.ef.dylan.carteleraplus.app-lifecycle-process-2.6.1-48 C:\Users\Usuario\.gradle\caches\transforms-3\d86bc2c106d7eae05b4a801414ab9cac\transformed\lifecycle-process-2.6.1\res
+com.ef.dylan.carteleraplus.app-slidingpanelayout-1.2.0-49 C:\Users\Usuario\.gradle\caches\transforms-3\e132ae9261474bfb216ea3e9269c1e42\transformed\slidingpanelayout-1.2.0\res
+com.ef.dylan.carteleraplus.app-recyclerview-1.1.0-50 C:\Users\Usuario\.gradle\caches\transforms-3\e4db3936f14322d37614308331fffb6d\transformed\recyclerview-1.1.0\res
+com.ef.dylan.carteleraplus.app-lifecycle-livedata-core-ktx-2.6.1-51 C:\Users\Usuario\.gradle\caches\transforms-3\e5da261b8132dfeaaf8e984b786f0314\transformed\lifecycle-livedata-core-ktx-2.6.1\res
+com.ef.dylan.carteleraplus.app-activity-1.6.1-52 C:\Users\Usuario\.gradle\caches\transforms-3\eb3657836e30f054e9dd0bbf6faef942\transformed\activity-1.6.1\res
+com.ef.dylan.carteleraplus.app-navigation-common-ktx-2.6.0-53 C:\Users\Usuario\.gradle\caches\transforms-3\ee99548c326b60244a89ab89934456a1\transformed\navigation-common-ktx-2.6.0\res
+com.ef.dylan.carteleraplus.app-viewpager2-1.0.0-54 C:\Users\Usuario\.gradle\caches\transforms-3\f178f0681f6225ce73c03028d135ba5c\transformed\viewpager2-1.0.0\res
+com.ef.dylan.carteleraplus.app-appcompat-resources-1.6.1-55 C:\Users\Usuario\.gradle\caches\transforms-3\f72aae21a441d637a0e831196f7293dc\transformed\appcompat-resources-1.6.1\res
+com.ef.dylan.carteleraplus.app-google-services-56 C:\Users\Usuario\Desktop\PROYECTOS DAM\Kotlin\EFCarteleraPlus\app\build\generated\res\google-services\debug
+com.ef.dylan.carteleraplus.app-pngs-57 C:\Users\Usuario\Desktop\PROYECTOS DAM\Kotlin\EFCarteleraPlus\app\build\generated\res\pngs\debug
+com.ef.dylan.carteleraplus.app-resValues-58 C:\Users\Usuario\Desktop\PROYECTOS DAM\Kotlin\EFCarteleraPlus\app\build\generated\res\resValues\debug
+com.ef.dylan.carteleraplus.app-rs-59 C:\Users\Usuario\Desktop\PROYECTOS DAM\Kotlin\EFCarteleraPlus\app\build\generated\res\rs\debug
+com.ef.dylan.carteleraplus.app-packageDebugResources-60 C:\Users\Usuario\Desktop\PROYECTOS DAM\Kotlin\EFCarteleraPlus\app\build\intermediates\incremental\debug\packageDebugResources\merged.dir
+com.ef.dylan.carteleraplus.app-packageDebugResources-61 C:\Users\Usuario\Desktop\PROYECTOS DAM\Kotlin\EFCarteleraPlus\app\build\intermediates\incremental\debug\packageDebugResources\stripped.dir
+com.ef.dylan.carteleraplus.app-merged_res-62 C:\Users\Usuario\Desktop\PROYECTOS DAM\Kotlin\EFCarteleraPlus\app\build\intermediates\merged_res\debug
+com.ef.dylan.carteleraplus.app-debug-63 C:\Users\Usuario\Desktop\PROYECTOS DAM\Kotlin\EFCarteleraPlus\app\src\debug\res
+com.ef.dylan.carteleraplus.app-main-64 C:\Users\Usuario\Desktop\PROYECTOS DAM\Kotlin\EFCarteleraPlus\app\src\main\res
