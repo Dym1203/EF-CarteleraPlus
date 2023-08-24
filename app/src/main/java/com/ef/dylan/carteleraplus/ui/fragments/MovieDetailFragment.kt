@@ -65,7 +65,6 @@ class MovieDetailFragment : Fragment() {
         }
 
         binding.btnRemoveFavorite.setOnClickListener {
-            movie.isFavorite = false
             viewModel.removeMovieFromFavorites(movie)
             Snackbar.make(binding.root, "¡Película eliminada de Favoritos!", Snackbar.LENGTH_SHORT).show()
         }
