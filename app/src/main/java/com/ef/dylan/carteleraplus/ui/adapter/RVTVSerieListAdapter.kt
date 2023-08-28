@@ -33,32 +33,17 @@ class RVTVSerieListAdapter(var series : List<TVSerie>) : RecyclerView.Adapter<TV
 
 class TVSerieViewHolder(private val binding : ItemTvserieBinding) : RecyclerView.ViewHolder(binding.root) {
     fun bind (tvserie : TVSerie) {
-        binding.txtserietitle.text = "Título: ${tvserie.titulo}"
+        binding.txtserietitle.text = tvserie.titulo
         binding.txtserieoriginallanguage.text = "Idioma: ${tvserie.idioma}"
         binding.txtseriepopularity.text = "Popularidad: ${tvserie.popularidad}"
         binding.cpiPuntuacionSerie.maxProgress = 10.0
         binding.cpiPuntuacionSerie.setCurrentProgress(tvserie.puntuacion)
         binding.txtserieorigincountry.text = "País: ${tvserie.pais}"
         /*Glide*/
-        val cacheDir = binding.root.context.cacheDir
-        val cacheFileName = "temp_image_${tvserie.titulo}.png"
-        val cacheFile = File(cacheDir, cacheFileName)
-        try {
-            if (cacheFile.exists()) {
-                cacheFile.delete()
-            }
-            val inputStream = FileInputStream(tvserie.poster)
-            cacheFile.outputStream().use { outputStream ->
-                inputStream.copyTo(outputStream)
-            }
-            Glide.with(binding.root)
-                .load(cacheFile)
-                .override(200, 250)
-                .error(R.drawable.mistake)
-                .into(binding.imgserieposter)
-        }
-        catch (e : IOException) {
-            e.printStackTrace()
-        }
+        Glide.with(binding.root)
+            .load(tvserie.poster)
+            .override(200, 250)
+            .error(R.drawable.mistake)
+            .into(binding.imgserieposter)
     }
 }

@@ -3489,8 +3489,6 @@ id east
 id edge
 id edit_query
 id edtEmail
-id edtIdiomaOriginal
-id edtPaisOrigen
 id edtPassword
 id edtPopularidad
 id edtPuntuacion
@@ -3768,6 +3766,8 @@ id snapMargins
 id south
 id spacer
 id special_effects_controller_view_tag
+id spinnerIdiomaOriginal
+id spinnerPaisOrigen
 id spline
 id split_action_bar
 id spread

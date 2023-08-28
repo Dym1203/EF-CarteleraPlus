@@ -36,8 +36,8 @@
         "source": "C:\\Users\\Usuario\\.gradle\\daemon\\7.5\\com.ef.dylan.carteleraplus.app-main-64:\\layout\\fragment_firebase_movie.xml"
     },
     {
-        "merged": "com.ef.dylan.carteleraplus.app-mergeDebugResources-61:/layout/fragment_movie_detail.xml",
-        "source": "com.ef.dylan.carteleraplus.app-main-64:/layout/fragment_movie_detail.xml"
+        "merged": "com.ef.dylan.carteleraplus.app-mergeDebugResources-61:/layout/activity_add_tvserie.xml",
+        "source": "com.ef.dylan.carteleraplus.app-main-64:/layout/activity_add_tvserie.xml"
     },
     {
         "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\7.5\\com.ef.dylan.carteleraplus.app-mergeDebugResources-61:\\layout\\fragment_cuenta.xml",

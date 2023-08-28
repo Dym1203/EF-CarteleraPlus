@@ -86,20 +86,15 @@ class CuentaFragment : Fragment() {
         val googleClient = GoogleSignIn.getClient(requireContext(), googleSignInOptions)
         googleClient.signOut()
 
-        // Redirigir a la pantalla de inicio de sesión
-        val intent = Intent(requireContext(), LoginActivity::class.java)
-        intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-        startActivity(intent)
-
-        /**/
+        /*Shared Preferences*/
         val sharedPreferences = requireContext().getSharedPreferences("user_prefs", Context.MODE_PRIVATE)
         val editor = sharedPreferences.edit()
         editor.putBoolean("user_logged_in", false)
         editor.apply()
 
-        val intentLogin = Intent(requireContext(), LoginActivity::class.java)
-        intentLogin.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-        startActivity(intentLogin)
+        val intent = Intent(requireContext(), LoginActivity::class.java)
+        intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+        startActivity(intent)
     }
 
 }

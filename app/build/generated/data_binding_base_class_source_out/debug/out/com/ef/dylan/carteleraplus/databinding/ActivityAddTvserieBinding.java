@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.Spinner;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -28,12 +29,6 @@ public final class ActivityAddTvserieBinding implements ViewBinding {
 
   @NonNull
   public final MaterialButton btnRegistrarSerie;
-
-  @NonNull
-  public final EditText edtIdiomaOriginal;
-
-  @NonNull
-  public final EditText edtPaisOrigen;
 
   @NonNull
   public final EditText edtPopularidad;
@@ -63,6 +58,12 @@ public final class ActivityAddTvserieBinding implements ViewBinding {
   public final LinearLayout llSinopsis;
 
   @NonNull
+  public final Spinner spinnerIdiomaOriginal;
+
+  @NonNull
+  public final Spinner spinnerPaisOrigen;
+
+  @NonNull
   public final TextView tvAgregarTVSerie;
 
   @NonNull
@@ -88,20 +89,18 @@ public final class ActivityAddTvserieBinding implements ViewBinding {
 
   private ActivityAddTvserieBinding(@NonNull ConstraintLayout rootView,
       @NonNull MaterialButton btnAgregarPoster, @NonNull MaterialButton btnRegistrarSerie,
-      @NonNull EditText edtIdiomaOriginal, @NonNull EditText edtPaisOrigen,
       @NonNull EditText edtPopularidad, @NonNull EditText edtPuntuacion,
       @NonNull EditText edtSinopsis, @NonNull EditText edtTitulo,
       @NonNull ImageView imgImagenSeleccionada, @NonNull LinearLayout llCountryAndLanguage,
       @NonNull LinearLayout llOriginalLanguage, @NonNull LinearLayout llPuntuacion,
-      @NonNull LinearLayout llSinopsis, @NonNull TextView tvAgregarTVSerie,
+      @NonNull LinearLayout llSinopsis, @NonNull Spinner spinnerIdiomaOriginal,
+      @NonNull Spinner spinnerPaisOrigen, @NonNull TextView tvAgregarTVSerie,
       @NonNull TextView tvIdiomaOriginal, @NonNull TextView tvPaisOrigen,
       @NonNull TextView tvPopularidad, @NonNull TextView tvPoster, @NonNull TextView tvPuntuacion,
       @NonNull TextView tvSinopsis, @NonNull TextView tvTitulo) {
     this.rootView = rootView;
     this.btnAgregarPoster = btnAgregarPoster;
     this.btnRegistrarSerie = btnRegistrarSerie;
-    this.edtIdiomaOriginal = edtIdiomaOriginal;
-    this.edtPaisOrigen = edtPaisOrigen;
     this.edtPopularidad = edtPopularidad;
     this.edtPuntuacion = edtPuntuacion;
     this.edtSinopsis = edtSinopsis;
@@ -111,6 +110,8 @@ public final class ActivityAddTvserieBinding implements ViewBinding {
     this.llOriginalLanguage = llOriginalLanguage;
     this.llPuntuacion = llPuntuacion;
     this.llSinopsis = llSinopsis;
+    this.spinnerIdiomaOriginal = spinnerIdiomaOriginal;
+    this.spinnerPaisOrigen = spinnerPaisOrigen;
     this.tvAgregarTVSerie = tvAgregarTVSerie;
     this.tvIdiomaOriginal = tvIdiomaOriginal;
     this.tvPaisOrigen = tvPaisOrigen;
@@ -157,18 +158,6 @@ public final class ActivityAddTvserieBinding implements ViewBinding {
       id = R.id.btnRegistrarSerie;
       MaterialButton btnRegistrarSerie = ViewBindings.findChildViewById(rootView, id);
       if (btnRegistrarSerie == null) {
-        break missingId;
-      }
-
-      id = R.id.edtIdiomaOriginal;
-      EditText edtIdiomaOriginal = ViewBindings.findChildViewById(rootView, id);
-      if (edtIdiomaOriginal == null) {
-        break missingId;
-      }
-
-      id = R.id.edtPaisOrigen;
-      EditText edtPaisOrigen = ViewBindings.findChildViewById(rootView, id);
-      if (edtPaisOrigen == null) {
         break missingId;
       }
 
@@ -226,6 +215,18 @@ public final class ActivityAddTvserieBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.spinnerIdiomaOriginal;
+      Spinner spinnerIdiomaOriginal = ViewBindings.findChildViewById(rootView, id);
+      if (spinnerIdiomaOriginal == null) {
+        break missingId;
+      }
+
+      id = R.id.spinnerPaisOrigen;
+      Spinner spinnerPaisOrigen = ViewBindings.findChildViewById(rootView, id);
+      if (spinnerPaisOrigen == null) {
+        break missingId;
+      }
+
       id = R.id.tvAgregarTVSerie;
       TextView tvAgregarTVSerie = ViewBindings.findChildViewById(rootView, id);
       if (tvAgregarTVSerie == null) {
@@ -275,10 +276,10 @@ public final class ActivityAddTvserieBinding implements ViewBinding {
       }
 
       return new ActivityAddTvserieBinding((ConstraintLayout) rootView, btnAgregarPoster,
-          btnRegistrarSerie, edtIdiomaOriginal, edtPaisOrigen, edtPopularidad, edtPuntuacion,
-          edtSinopsis, edtTitulo, imgImagenSeleccionada, llCountryAndLanguage, llOriginalLanguage,
-          llPuntuacion, llSinopsis, tvAgregarTVSerie, tvIdiomaOriginal, tvPaisOrigen, tvPopularidad,
-          tvPoster, tvPuntuacion, tvSinopsis, tvTitulo);
+          btnRegistrarSerie, edtPopularidad, edtPuntuacion, edtSinopsis, edtTitulo,
+          imgImagenSeleccionada, llCountryAndLanguage, llOriginalLanguage, llPuntuacion, llSinopsis,
+          spinnerIdiomaOriginal, spinnerPaisOrigen, tvAgregarTVSerie, tvIdiomaOriginal,
+          tvPaisOrigen, tvPopularidad, tvPoster, tvPuntuacion, tvSinopsis, tvTitulo);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

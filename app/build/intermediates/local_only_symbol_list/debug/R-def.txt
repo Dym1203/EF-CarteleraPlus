@@ -120,8 +120,6 @@ id cuentaFragment
 id cv_item_movie
 id cv_item_serietv
 id edtEmail
-id edtIdiomaOriginal
-id edtPaisOrigen
 id edtPassword
 id edtPopularidad
 id edtPuntuacion
@@ -147,6 +145,8 @@ id movie_graph
 id rv_movie_list
 id rv_moviesfavorite
 id rv_tvserie_list
+id spinnerIdiomaOriginal
+id spinnerPaisOrigen
 id switchEmailMessages
 id switchNotifications
 id tvAccountSettings
