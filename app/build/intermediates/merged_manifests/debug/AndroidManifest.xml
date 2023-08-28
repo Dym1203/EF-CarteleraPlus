@@ -30,7 +30,6 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/name_app"
         android:supportsRtl="true"
-        android:testOnly="true"
         android:theme="@style/Theme.EFCarteleraPlus" >
         <activity
             android:name="com.ef.dylan.carteleraplus.ui.AddTVSerieActivity"
