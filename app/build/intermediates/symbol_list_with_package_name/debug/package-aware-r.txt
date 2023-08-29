@@ -3175,8 +3175,8 @@ drawable ic_clear_black_24
 drawable ic_clock_black_24dp
 drawable ic_edit
 drawable ic_favorite_24
+drawable ic_firebase_24
 drawable ic_flag_country
-drawable ic_format_list_bulleted_24
 drawable ic_google
 drawable ic_info
 drawable ic_keyboard_black_24dp
