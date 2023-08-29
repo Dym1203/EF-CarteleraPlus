@@ -11,7 +11,7 @@ import java.io.File
 import java.io.FileInputStream
 import java.io.IOException
 
-class RVTVSerieListAdapter(var series : List<TVSerie>) : RecyclerView.Adapter<TVSerieViewHolder>() {
+class RVTVSerieListAdapter(var series : List<TVSerie>, val onTVSerieClick: (TVSerie) -> Unit) : RecyclerView.Adapter<TVSerieViewHolder>() {
 
     fun setData(newSeries : List<TVSerie>) {
         series = newSeries
@@ -20,7 +20,7 @@ class RVTVSerieListAdapter(var series : List<TVSerie>) : RecyclerView.Adapter<TV
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TVSerieViewHolder {
         val binding = ItemTvserieBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-        return TVSerieViewHolder(binding)
+        return TVSerieViewHolder(binding, onTVSerieClick)
     }
 
     override fun getItemCount() : Int = series.size
@@ -31,7 +31,7 @@ class RVTVSerieListAdapter(var series : List<TVSerie>) : RecyclerView.Adapter<TV
 
 }
 
-class TVSerieViewHolder(private val binding : ItemTvserieBinding) : RecyclerView.ViewHolder(binding.root) {
+class TVSerieViewHolder(private val binding : ItemTvserieBinding, val onTVSerieClick: (TVSerie) -> Unit) : RecyclerView.ViewHolder(binding.root) {
     fun bind (tvserie : TVSerie) {
         binding.txtserietitle.text = tvserie.titulo
         binding.txtserieoriginallanguage.text = "Idioma: ${tvserie.idioma}"
@@ -45,5 +45,9 @@ class TVSerieViewHolder(private val binding : ItemTvserieBinding) : RecyclerView
             .override(200, 250)
             .error(R.drawable.mistake)
             .into(binding.imgserieposter)
+        binding.root.setOnClickListener {
+            // Pasar a la siguiente pantalla
+            onTVSerieClick(tvserie)
+        }
     }
 }

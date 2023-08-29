@@ -3300,6 +3300,7 @@ id SHOW_PROGRESS
 id SYM
 id TOP_END
 id TOP_START
+id TVSerieDetailFragment
 id accelerate
 id accessibility_action_clickable_span
 id accessibility_custom_action_0
@@ -3347,6 +3348,7 @@ id action_bar_title
 id action_container
 id action_context_bar
 id action_divider
+id action_firebaseMovieFragment_to_TVSerieDetailFragment
 id action_image
 id action_menu_divider
 id action_menu_presenter
@@ -3550,6 +3552,7 @@ id ignoreRequest
 id image
 id imgCanchita
 id imgDetalleMoviePosterPath
+id imgDetalleTVSeriePosterPath
 id imgImagenSeleccionada
 id imgmovieposter
 id imgserieposter
@@ -3848,7 +3851,14 @@ id tvChangePassword
 id tvDetalleMovieReleaseDate
 id tvDetalleMovieTitle
 id tvDetalleMovieVoteAverage
+id tvDetalleTVSerieName
+id tvDetalleTVSerieOriginCountry
+id tvDetalleTVSerieOriginalLanguage
+id tvDetalleTVSerieOverview
+id tvDetalleTVSeriePopularity
+id tvDetalleTVSerieVoteAverage
 id tvDetallesMovie
+id tvDetallesTVSerie
 id tvEditInfo
 id tvEmailMessages
 id tvIdiomaOriginal
@@ -4044,6 +4054,7 @@ layout fragment_firebase_movie
 layout fragment_movie_detail
 layout fragment_movie_favorite
 layout fragment_movie_listado
+layout fragment_tv_serie_detail
 layout item_movie
 layout item_tvserie
 layout m3_alert_dialog

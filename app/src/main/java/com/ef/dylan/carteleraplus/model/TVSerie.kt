@@ -1,7 +1,10 @@
 package com.ef.dylan.carteleraplus.model
 
+import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
+import kotlinx.parcelize.Parcelize
 
+@Parcelize
 data class TVSerie(
     @SerializedName("name")
     val titulo : String,
@@ -17,4 +20,4 @@ data class TVSerie(
     val puntuacion : Double,
     @SerializedName("poster_path")
     val poster : String
-)
+) : Parcelable

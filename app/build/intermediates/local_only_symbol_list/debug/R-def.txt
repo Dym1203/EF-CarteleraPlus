@@ -103,6 +103,8 @@ drawable palomitas
 drawable poster
 drawable poster1
 font cabin
+id TVSerieDetailFragment
+id action_firebaseMovieFragment_to_TVSerieDetailFragment
 id action_movieFavoriteFragment_to_movieDetailFragment
 id action_movieListadoFragment_to_movieDetailFragment
 id bnv_menu
@@ -131,6 +133,7 @@ id firebaseMovieFragment
 id guideline_medium
 id imgCanchita
 id imgDetalleMoviePosterPath
+id imgDetalleTVSeriePosterPath
 id imgImagenSeleccionada
 id imgmovieposter
 id imgserieposter
@@ -156,7 +159,14 @@ id tvChangePassword
 id tvDetalleMovieReleaseDate
 id tvDetalleMovieTitle
 id tvDetalleMovieVoteAverage
+id tvDetalleTVSerieName
+id tvDetalleTVSerieOriginCountry
+id tvDetalleTVSerieOriginalLanguage
+id tvDetalleTVSerieOverview
+id tvDetalleTVSeriePopularity
+id tvDetalleTVSerieVoteAverage
 id tvDetallesMovie
+id tvDetallesTVSerie
 id tvEditInfo
 id tvEmailMessages
 id tvIdiomaOriginal
@@ -190,6 +200,7 @@ layout fragment_firebase_movie
 layout fragment_movie_detail
 layout fragment_movie_favorite
 layout fragment_movie_listado
+layout fragment_tv_serie_detail
 layout item_movie
 layout item_tvserie
 menu carteleraplus_menu

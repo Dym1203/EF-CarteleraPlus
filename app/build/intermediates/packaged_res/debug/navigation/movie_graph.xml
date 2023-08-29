@@ -27,7 +27,11 @@
         android:id="@+id/firebaseMovieFragment"
         android:name="com.ef.dylan.carteleraplus.ui.fragments.FirebaseMovieFragment"
         android:label="fragment_firebase_movie"
-        tools:layout="@layout/fragment_firebase_movie" />
+        tools:layout="@layout/fragment_firebase_movie" >
+        <action
+            android:id="@+id/action_firebaseMovieFragment_to_TVSerieDetailFragment"
+            app:destination="@id/TVSerieDetailFragment" />
+    </fragment>
     <fragment
         android:id="@+id/cuentaFragment"
         android:name="com.ef.dylan.carteleraplus.ui.fragments.CuentaFragment"
@@ -41,5 +45,14 @@
         <argument
             android:name="movie"
             app:argType="com.ef.dylan.carteleraplus.model.Movie" />
+    </fragment>
+    <fragment
+        android:id="@+id/TVSerieDetailFragment"
+        android:name="com.ef.dylan.carteleraplus.ui.fragments.TVSerieDetailFragment"
+        android:label="fragment_tv_serie_detail"
+        tools:layout="@layout/fragment_tv_serie_detail" >
+        <argument
+            android:name="tvserie"
+            app:argType="com.ef.dylan.carteleraplus.model.TVSerie" />
     </fragment>
 </navigation>
