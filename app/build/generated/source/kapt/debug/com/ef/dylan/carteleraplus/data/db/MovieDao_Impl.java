@@ -11,8 +11,10 @@ import androidx.room.util.CursorUtil;
 import androidx.room.util.DBUtil;
 import androidx.sqlite.db.SupportSQLiteStatement;
 import com.ef.dylan.carteleraplus.model.Movie;
+import java.lang.Boolean;
 import java.lang.Class;
 import java.lang.Exception;
+import java.lang.Integer;
 import java.lang.Object;
 import java.lang.Override;
 import java.lang.String;
@@ -159,6 +161,40 @@ public final class MovieDao_Impl implements MovieDao {
             _tmpIsFavorite = _tmp != 0;
             _item = new Movie(_tmpId,_tmpTitulo,_tmpPoster,_tmpFechaLanzamiento,_tmpPuntuacion,_tmpIsFavorite);
             _result.add(_item);
+          }
+          return _result;
+        } finally {
+          _cursor.close();
+          _statement.release();
+        }
+      }
+    }, continuation);
+  }
+
+  @Override
+  public Object isMovieFavorite(final int movieId,
+      final Continuation<? super Boolean> continuation) {
+    final String _sql = "SELECT EXISTS (SELECT 1 FROM movie WHERE id = ?)";
+    final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 1);
+    int _argIndex = 1;
+    _statement.bindLong(_argIndex, movieId);
+    final CancellationSignal _cancellationSignal = DBUtil.createCancellationSignal();
+    return CoroutinesRoom.execute(__db, false, _cancellationSignal, new Callable<Boolean>() {
+      @Override
+      public Boolean call() throws Exception {
+        final Cursor _cursor = DBUtil.query(__db, _statement, false, null);
+        try {
+          final Boolean _result;
+          if(_cursor.moveToFirst()) {
+            final Integer _tmp;
+            if (_cursor.isNull(0)) {
+              _tmp = null;
+            } else {
+              _tmp = _cursor.getInt(0);
+            }
+            _result = _tmp == null ? null : _tmp != 0;
+          } else {
+            _result = null;
           }
           return _result;
         } finally {

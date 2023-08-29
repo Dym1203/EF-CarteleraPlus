@@ -16,10 +16,15 @@ class MovieDbRepository(private val db: MovieDatabase? = null) {
         }
     }
 
-    suspend fun addMovieToFavorites(movie : Movie) {
+    suspend fun addMovieToFavorites(movie : Movie) : Boolean {
         dao?.let {
-            dao.addMovieToFavorite(movie)
+            val isMovieFavorite = dao.isMovieFavorite(movie.id)
+            if (!isMovieFavorite) {
+                dao.addMovieToFavorite(movie)
+                return true
+            }
         }
+        return false
     }
 
     suspend fun removeMovieFromFavorites(movie : Movie) {

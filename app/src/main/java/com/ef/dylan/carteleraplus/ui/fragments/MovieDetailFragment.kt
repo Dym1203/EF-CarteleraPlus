@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.navArgs
+import cn.pedant.SweetAlert.SweetAlertDialog
 import com.bumptech.glide.Glide
 import com.ef.dylan.carteleraplus.databinding.FragmentMovieDetailBinding
 import com.ef.dylan.carteleraplus.model.Movie
@@ -59,9 +60,17 @@ class MovieDetailFragment : Fragment() {
         }
 
         binding.btnAddFavorite.setOnClickListener {
-            movie.isFavorite = true
-            viewModel.addMoviesFavorites(movie)
-            Snackbar.make(binding.root, "¡Película agregada a Favoritos!", Snackbar.LENGTH_SHORT).show()
+            if (!movie.isFavorite) {
+                movie.isFavorite = true
+                viewModel.addMoviesFavorites(movie)
+                Snackbar.make(binding.root, "¡Película agregada a Favoritos!", Snackbar.LENGTH_SHORT).show()
+            } else {
+                SweetAlertDialog(requireContext(), SweetAlertDialog.ERROR_TYPE)
+                    .setTitleText("Error")
+                    .setContentText("¡Esta película ya está en tus favoritos!")
+                    .setConfirmText("Cerrar")
+                    .show()
+            }
         }
 
         binding.btnRemoveFavorite.setOnClickListener {
