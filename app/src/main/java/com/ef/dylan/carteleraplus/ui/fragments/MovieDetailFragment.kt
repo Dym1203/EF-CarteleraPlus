@@ -39,7 +39,7 @@ class MovieDetailFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         binding.tvDetalleMovieTitle.text = movie.titulo
         binding.tvDetalleMovieReleaseDate.text = "Fecha de Estreno: ${movie.fechaLanzamiento}"
-        binding.tvDetalleMovieVoteAverage.text = "Puntuación : ${movie.puntuacion}"
+        binding.tvDetalleMovieVoteAverage.text = "Puntuación: ${movie.puntuacion}"
         val baseImageUrl = "https://image.tmdb.org/t/p/"
         val posterSize = "w300"
         val posterPath = movie.poster

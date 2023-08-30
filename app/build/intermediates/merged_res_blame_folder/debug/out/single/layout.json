@@ -32,16 +32,16 @@
         "source": "C:\\Users\\Usuario\\.gradle\\daemon\\7.5\\com.ef.dylan.carteleraplus.app-main-64:\\layout\\activity_splash.xml"
     },
     {
-        "merged": "com.ef.dylan.carteleraplus.app-mergeDebugResources-61:/layout/fragment_tv_serie_detail.xml",
-        "source": "com.ef.dylan.carteleraplus.app-main-64:/layout/fragment_tv_serie_detail.xml"
-    },
-    {
         "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\7.5\\com.ef.dylan.carteleraplus.app-mergeDebugResources-61:\\layout\\activity_main.xml",
         "source": "C:\\Users\\Usuario\\.gradle\\daemon\\7.5\\com.ef.dylan.carteleraplus.app-main-64:\\layout\\activity_main.xml"
     },
     {
         "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\7.5\\com.ef.dylan.carteleraplus.app-mergeDebugResources-61:\\layout\\fragment_firebase_movie.xml",
         "source": "C:\\Users\\Usuario\\.gradle\\daemon\\7.5\\com.ef.dylan.carteleraplus.app-main-64:\\layout\\fragment_firebase_movie.xml"
+    },
+    {
+        "merged": "com.ef.dylan.carteleraplus.app-mergeDebugResources-61:/layout/fragment_movie_detail.xml",
+        "source": "com.ef.dylan.carteleraplus.app-main-64:/layout/fragment_movie_detail.xml"
     },
     {
         "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\7.5\\com.ef.dylan.carteleraplus.app-mergeDebugResources-61:\\layout\\fragment_cuenta.xml",

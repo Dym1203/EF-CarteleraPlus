@@ -8,12 +8,12 @@
         "source": "C:\\Users\\Usuario\\.gradle\\daemon\\7.5\\com.ef.dylan.carteleraplus.app-main-64:\\drawable\\poster1.png"
     },
     {
-        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\7.5\\com.ef.dylan.carteleraplus.app-merged_res-62:\\mipmap-mdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\7.5\\com.ef.dylan.carteleraplus.app-main-64:\\mipmap-mdpi\\ic_launcher.png"
-    },
-    {
         "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\7.5\\com.ef.dylan.carteleraplus.app-merged_res-62:\\drawable_ic_edit.xml.flat",
         "source": "C:\\Users\\Usuario\\.gradle\\daemon\\7.5\\com.ef.dylan.carteleraplus.app-main-64:\\drawable\\ic_edit.xml"
+    },
+    {
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\7.5\\com.ef.dylan.carteleraplus.app-merged_res-62:\\mipmap-mdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\7.5\\com.ef.dylan.carteleraplus.app-main-64:\\mipmap-mdpi\\ic_launcher.png"
     },
     {
         "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\7.5\\com.ef.dylan.carteleraplus.app-merged_res-62:\\drawable_ic_popularity.xml.flat",
@@ -80,10 +80,6 @@
         "source": "C:\\Users\\Usuario\\.gradle\\daemon\\7.5\\com.ef.dylan.carteleraplus.app-main-64:\\drawable\\baseline_visibility_off_24.xml"
     },
     {
-        "merged": "com.ef.dylan.carteleraplus.app-merged_res-62:/layout_fragment_tv_serie_detail.xml.flat",
-        "source": "com.ef.dylan.carteleraplus.app-main-64:/layout/fragment_tv_serie_detail.xml"
-    },
-    {
         "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\7.5\\com.ef.dylan.carteleraplus.app-merged_res-62:\\mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
         "source": "C:\\Users\\Usuario\\.gradle\\daemon\\7.5\\com.ef.dylan.carteleraplus.app-main-64:\\mipmap-xxxhdpi\\ic_launcher_foreground.png"
     },
@@ -94,6 +90,10 @@
     {
         "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\7.5\\com.ef.dylan.carteleraplus.app-merged_res-62:\\drawable_custom_input.xml.flat",
         "source": "C:\\Users\\Usuario\\.gradle\\daemon\\7.5\\com.ef.dylan.carteleraplus.app-main-64:\\drawable\\custom_input.xml"
+    },
+    {
+        "merged": "com.ef.dylan.carteleraplus.app-merged_res-62:/layout_fragment_movie_detail.xml.flat",
+        "source": "com.ef.dylan.carteleraplus.app-main-64:/layout/fragment_movie_detail.xml"
     },
     {
         "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\7.5\\com.ef.dylan.carteleraplus.app-merged_res-62:\\layout_item_tvserie.xml.flat",
