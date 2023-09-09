@@ -5,6 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.bumptech.glide.Glide
+import com.ef.dylan.carteleraplus.R
 import com.ef.dylan.carteleraplus.databinding.ItemMovieBinding
 import com.ef.dylan.carteleraplus.model.Movie
 
@@ -25,7 +26,6 @@ class RVMovieListAdapter(var movies : List<Movie>, val onMovieClick: (Movie) -> 
 
 class MovieVH(private val binding : ItemMovieBinding, val onMovieClick: (Movie) -> Unit) : ViewHolder(binding.root) {
     fun bind(movie : Movie) {
-        binding.txtmovietitle.text = movie.titulo
         val baseImageUrl = "https://image.tmdb.org/t/p/"
         val posterSize = "w300"
         val posterPath = movie.poster
@@ -33,8 +33,8 @@ class MovieVH(private val binding : ItemMovieBinding, val onMovieClick: (Movie) 
         /*Glide*/
         Glide.with(binding.root)
             .load(imageUrl)
+            .error(R.drawable.mistake)
             .into(binding.imgmovieposter)
-        binding.txtmovierelease.text = movie.fechaLanzamiento
         binding.cpiPuntuacion.maxProgress = 10.0
         binding.cpiPuntuacion.setCurrentProgress(movie.puntuacion)
         /**/

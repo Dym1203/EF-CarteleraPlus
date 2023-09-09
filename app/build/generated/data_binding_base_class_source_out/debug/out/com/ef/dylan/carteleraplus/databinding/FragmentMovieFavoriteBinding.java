@@ -4,6 +4,7 @@ package com.ef.dylan.carteleraplus.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -22,10 +23,14 @@ public final class FragmentMovieFavoriteBinding implements ViewBinding {
   @NonNull
   public final RecyclerView rvMoviesfavorite;
 
+  @NonNull
+  public final TextView tvPeliculasFavoritas;
+
   private FragmentMovieFavoriteBinding(@NonNull ConstraintLayout rootView,
-      @NonNull RecyclerView rvMoviesfavorite) {
+      @NonNull RecyclerView rvMoviesfavorite, @NonNull TextView tvPeliculasFavoritas) {
     this.rootView = rootView;
     this.rvMoviesfavorite = rvMoviesfavorite;
+    this.tvPeliculasFavoritas = tvPeliculasFavoritas;
   }
 
   @Override
@@ -61,7 +66,14 @@ public final class FragmentMovieFavoriteBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentMovieFavoriteBinding((ConstraintLayout) rootView, rvMoviesfavorite);
+      id = R.id.tvPeliculasFavoritas;
+      TextView tvPeliculasFavoritas = ViewBindings.findChildViewById(rootView, id);
+      if (tvPeliculasFavoritas == null) {
+        break missingId;
+      }
+
+      return new FragmentMovieFavoriteBinding((ConstraintLayout) rootView, rvMoviesfavorite,
+          tvPeliculasFavoritas);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

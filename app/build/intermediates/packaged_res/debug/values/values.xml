@@ -93,7 +93,7 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="name_app">CarteleraPlus</string>
     <string name="project_id" translatable="false">cartelera-plus</string>
-    <string name="version">Versión 1.1.0</string>
+    <string name="version">Versión 1.0.0</string>
     <string name="web_client_id">113887046755938785952</string>
     <style name="Theme.EFCarteleraPlus" parent="Theme.Material3.Light.NoActionBar">
         <item name="colorPrimary">@color/md_theme_light_primary</item>
@@ -125,5 +125,10 @@
         
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         
+    </style>
+    <style name="roundImageView" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">20dp</item>
+        <item name="color">@color/white</item>
     </style>
 </resources>

@@ -4,6 +4,7 @@ package com.ef.dylan.carteleraplus.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -26,11 +27,16 @@ public final class FragmentFirebaseMovieBinding implements ViewBinding {
   @NonNull
   public final RecyclerView rvTvserieList;
 
+  @NonNull
+  public final TextView tvSeriesFirebase;
+
   private FragmentFirebaseMovieBinding(@NonNull ConstraintLayout rootView,
-      @NonNull FloatingActionButton fabAddTvserie, @NonNull RecyclerView rvTvserieList) {
+      @NonNull FloatingActionButton fabAddTvserie, @NonNull RecyclerView rvTvserieList,
+      @NonNull TextView tvSeriesFirebase) {
     this.rootView = rootView;
     this.fabAddTvserie = fabAddTvserie;
     this.rvTvserieList = rvTvserieList;
+    this.tvSeriesFirebase = tvSeriesFirebase;
   }
 
   @Override
@@ -72,8 +78,14 @@ public final class FragmentFirebaseMovieBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.tvSeriesFirebase;
+      TextView tvSeriesFirebase = ViewBindings.findChildViewById(rootView, id);
+      if (tvSeriesFirebase == null) {
+        break missingId;
+      }
+
       return new FragmentFirebaseMovieBinding((ConstraintLayout) rootView, fabAddTvserie,
-          rvTvserieList);
+          rvTvserieList, tvSeriesFirebase);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

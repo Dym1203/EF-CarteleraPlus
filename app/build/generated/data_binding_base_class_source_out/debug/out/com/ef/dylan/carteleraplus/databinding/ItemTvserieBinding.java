@@ -4,8 +4,6 @@ package com.ef.dylan.carteleraplus.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.cardview.widget.CardView;
@@ -13,6 +11,7 @@ import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import antonkozyriatskyi.circularprogressindicator.CircularProgressIndicator;
 import com.ef.dylan.carteleraplus.R;
+import com.google.android.material.imageview.ShapeableImageView;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
@@ -28,33 +27,15 @@ public final class ItemTvserieBinding implements ViewBinding {
   public final CardView cvItemSerietv;
 
   @NonNull
-  public final ImageView imgserieposter;
-
-  @NonNull
-  public final TextView txtserieoriginallanguage;
-
-  @NonNull
-  public final TextView txtserieorigincountry;
-
-  @NonNull
-  public final TextView txtseriepopularity;
-
-  @NonNull
-  public final TextView txtserietitle;
+  public final ShapeableImageView imgserieposter;
 
   private ItemTvserieBinding(@NonNull CardView rootView,
       @NonNull CircularProgressIndicator cpiPuntuacionSerie, @NonNull CardView cvItemSerietv,
-      @NonNull ImageView imgserieposter, @NonNull TextView txtserieoriginallanguage,
-      @NonNull TextView txtserieorigincountry, @NonNull TextView txtseriepopularity,
-      @NonNull TextView txtserietitle) {
+      @NonNull ShapeableImageView imgserieposter) {
     this.rootView = rootView;
     this.cpiPuntuacionSerie = cpiPuntuacionSerie;
     this.cvItemSerietv = cvItemSerietv;
     this.imgserieposter = imgserieposter;
-    this.txtserieoriginallanguage = txtserieoriginallanguage;
-    this.txtserieorigincountry = txtserieorigincountry;
-    this.txtseriepopularity = txtseriepopularity;
-    this.txtserietitle = txtserietitle;
   }
 
   @Override
@@ -93,38 +74,13 @@ public final class ItemTvserieBinding implements ViewBinding {
       CardView cvItemSerietv = (CardView) rootView;
 
       id = R.id.imgserieposter;
-      ImageView imgserieposter = ViewBindings.findChildViewById(rootView, id);
+      ShapeableImageView imgserieposter = ViewBindings.findChildViewById(rootView, id);
       if (imgserieposter == null) {
         break missingId;
       }
 
-      id = R.id.txtserieoriginallanguage;
-      TextView txtserieoriginallanguage = ViewBindings.findChildViewById(rootView, id);
-      if (txtserieoriginallanguage == null) {
-        break missingId;
-      }
-
-      id = R.id.txtserieorigincountry;
-      TextView txtserieorigincountry = ViewBindings.findChildViewById(rootView, id);
-      if (txtserieorigincountry == null) {
-        break missingId;
-      }
-
-      id = R.id.txtseriepopularity;
-      TextView txtseriepopularity = ViewBindings.findChildViewById(rootView, id);
-      if (txtseriepopularity == null) {
-        break missingId;
-      }
-
-      id = R.id.txtserietitle;
-      TextView txtserietitle = ViewBindings.findChildViewById(rootView, id);
-      if (txtserietitle == null) {
-        break missingId;
-      }
-
       return new ItemTvserieBinding((CardView) rootView, cpiPuntuacionSerie, cvItemSerietv,
-          imgserieposter, txtserieoriginallanguage, txtserieorigincountry, txtseriepopularity,
-          txtserietitle);
+          imgserieposter);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

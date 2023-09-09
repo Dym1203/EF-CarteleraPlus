@@ -5,115 +5,123 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    android:background="#FFDAD6"
+    android:background="?attr/colorPrimaryFixed"
     tools:context=".ui.fragments.MovieDetailFragment">
 
-    <TextView
-        android:id="@+id/tvDetallesMovie"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/cabin"
-        android:text="Detalles de la Película"
-        android:layout_marginTop="16dp"
-        android:textColor="?attr/colorPrimary"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/tvDetalleMovieTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/cabin"
-        android:text="Película:"
-        android:layout_marginTop="32dp"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:layout_marginLeft="15dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvDetallesMovie" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-    <!-- <TextView
-        android:id="@+id/tvDetalleMovieOverview"
-        android:layout_width="365dp"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/cabin"
-        android:text="Sinopsis:"
-        android:layout_marginTop="16dp"
-        android:textSize="18sp"
-        android:layout_marginLeft="15dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvDetalleMovieTitle" /> -->
+            <TextView
+                android:id="@+id/tvDetalleMovieTitle"
+                android:layout_width="370dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/cabin"
+                android:lines="2"
+                android:text="Película"
+                android:textAlignment="center"
+                android:textColor="?attr/colorPrimary"
+                android:textSize="23sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-    <!--<TextView
-        android:id="@+id/tvDetalleMovieOriginalLanguage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/cabin"
-        android:text="Idioma Disponible:"
-        android:layout_marginTop="16dp"
-        android:textSize="18sp"
-        android:layout_marginLeft="15dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvDetalleMovieOverview" /> -->
+            <TextView
+                android:id="@+id/tvDetalleMovieOverview"
+                android:layout_width="365dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/cabin"
+                android:text="Sinopsis:"
+                android:layout_marginTop="10dp"
+                android:textSize="18sp"
+                android:layout_marginLeft="15dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvDetalleMovieTitle" />
 
-    <TextView
-        android:id="@+id/tvDetalleMovieVoteAverage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/cabin"
-        android:text="Puntuación:"
-        android:layout_marginTop="16dp"
-        android:textSize="18sp"
-        android:layout_marginLeft="15dp"
-        app:formattingPattern="%.1f"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvDetalleMovieTitle" />
+            <TextView
+                android:id="@+id/tvDetalleMovieOriginalLanguage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/cabin"
+                android:text="Idioma disponible:"
+                android:layout_marginTop="24dp"
+                android:textSize="18sp"
+                android:layout_marginLeft="15dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvDetalleMovieOverview" />
 
-    <TextView
-        android:id="@+id/tvDetalleMovieReleaseDate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/cabin"
-        android:text="Fecha de Estreno:"
-        android:layout_marginTop="16dp"
-        android:textSize="18sp"
-        android:layout_marginLeft="15dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvDetalleMovieVoteAverage" />
+            <TextView
+                android:id="@+id/tvDetalleMovieVoteAverage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/cabin"
+                android:text="Puntuación:"
+                android:layout_marginTop="24dp"
+                android:textSize="18sp"
+                android:layout_marginLeft="15dp"
+                app:formattingPattern="%.1f"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvDetalleMovieOriginalLanguage" />
 
-    <ImageView
-        android:id="@+id/imgDetalleMoviePosterPath"
-        android:layout_width="220dp"
-        android:layout_height="320dp"
-        android:layout_marginTop="48dp"
-        android:contentDescription="@null"
-        android:src="@drawable/poster"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvDetalleMovieReleaseDate" />
+            <TextView
+                android:id="@+id/tvDetalleMovieReleaseDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/cabin"
+                android:text="Fecha de estreno:"
+                android:layout_marginTop="24dp"
+                android:textSize="18sp"
+                android:layout_marginLeft="15dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvDetalleMovieVoteAverage" />
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnAddFavorite"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Añadir a Favoritos"
-        android:layout_marginTop="45dp"
-        android:layout_marginRight="15dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/imgDetalleMoviePosterPath" />
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/imgDetalleMoviePosterPath"
+                android:layout_width="224dp"
+                android:layout_height="280dp"
+                android:adjustViewBounds="true"
+                android:layout_marginTop="70dp"
+                android:contentDescription="@null"
+                android:src="@drawable/poster"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvDetalleMovieReleaseDate" />
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnRemoveFavorite"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Quitar de Favoritos"
-        android:layout_marginTop="45dp"
-        android:layout_marginRight="15dp"
-        android:backgroundTint="#EE463E"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btnAddFavorite" />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnAddFavorite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="45dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="20dp"
+                android:text="Añadir a Favoritos"
+                app:icon="@drawable/ic_star"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imgDetalleMoviePosterPath" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnRemoveFavorite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="20dp"
+                android:backgroundTint="#EE463E"
+                android:text="Quitar de Favoritos"
+                app:icon="@drawable/ic_remove"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btnAddFavorite" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

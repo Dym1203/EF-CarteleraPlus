@@ -9,10 +9,10 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.navArgs
 import cn.pedant.SweetAlert.SweetAlertDialog
 import com.bumptech.glide.Glide
+import com.ef.dylan.carteleraplus.R
 import com.ef.dylan.carteleraplus.databinding.FragmentMovieDetailBinding
 import com.ef.dylan.carteleraplus.model.Movie
 import com.ef.dylan.carteleraplus.ui.viewmodels.MovieDetailViewModel
-import com.google.android.material.snackbar.Snackbar
 
 class MovieDetailFragment : Fragment() {
 
@@ -38,8 +38,10 @@ class MovieDetailFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.tvDetalleMovieTitle.text = movie.titulo
-        binding.tvDetalleMovieReleaseDate.text = "Fecha de Estreno: ${movie.fechaLanzamiento}"
-        binding.tvDetalleMovieVoteAverage.text = "Puntuación: ${movie.puntuacion}"
+        binding.tvDetalleMovieOverview.text = "Overview: ${movie.sinopsis}"
+        binding.tvDetalleMovieOriginalLanguage.text = "Original Language: ${movie.idioma}"
+        binding.tvDetalleMovieReleaseDate.text = "Release Date: ${movie.fechaLanzamiento}"
+        binding.tvDetalleMovieVoteAverage.text = "Vote Average: ${movie.puntuacion}"
         val baseImageUrl = "https://image.tmdb.org/t/p/"
         val posterSize = "w300"
         val posterPath = movie.poster
@@ -47,6 +49,7 @@ class MovieDetailFragment : Fragment() {
         /*Glide*/
         Glide.with(binding.root)
             .load(imageUrl)
+            .error(R.drawable.mistake)
             .into(binding.imgDetalleMoviePosterPath)
 
         /*Favoritos*/
@@ -63,11 +66,17 @@ class MovieDetailFragment : Fragment() {
             if (!movie.isFavorite) {
                 movie.isFavorite = true
                 viewModel.addMoviesFavorites(movie)
-                Snackbar.make(binding.root, "¡Película agregada a Favoritos!", Snackbar.LENGTH_SHORT).show()
+                SweetAlertDialog(requireContext(), SweetAlertDialog.CUSTOM_IMAGE_TYPE)
+                    .setTitleText("Éxito")
+                    .setContentText("¡Película agregada a favoritos!")
+                    .setCustomImage(R.drawable.homersimpson)
+                    .setConfirmText("Cerrar")
+                    .show()
             } else {
-                SweetAlertDialog(requireContext(), SweetAlertDialog.ERROR_TYPE)
+                SweetAlertDialog(requireContext(), SweetAlertDialog.CUSTOM_IMAGE_TYPE)
                     .setTitleText("Error")
                     .setContentText("¡Esta película ya está en tus favoritos!")
+                    .setCustomImage(R.drawable.snowball)
                     .setConfirmText("Cerrar")
                     .show()
             }
@@ -75,7 +84,12 @@ class MovieDetailFragment : Fragment() {
 
         binding.btnRemoveFavorite.setOnClickListener {
             viewModel.removeMovieFromFavorites(movie)
-            Snackbar.make(binding.root, "¡Película eliminada de Favoritos!", Snackbar.LENGTH_SHORT).show()
+            SweetAlertDialog(requireContext(), SweetAlertDialog.CUSTOM_IMAGE_TYPE)
+                .setTitleText("Éxito")
+                .setContentText("¡Película eliminada de favoritos!")
+                .setCustomImage(R.drawable.supermario)
+                .setConfirmText("Cerrar")
+                .show()
         }
     }
 

@@ -3117,11 +3117,13 @@ drawable abc_textfield_search_activated_mtrl_alpha
 drawable abc_textfield_search_default_mtrl_alpha
 drawable abc_textfield_search_material
 drawable abc_vector_test
+drawable anonymous
 drawable avd_hide_password
 drawable avd_show_password
 drawable baseline_email_24
 drawable baseline_lock_24
 drawable baseline_visibility_off_24
+drawable bender
 drawable blue_button_background
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
@@ -3168,12 +3170,14 @@ drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
 drawable gray_button_background
 drawable green_button_background
+drawable homersimpson
 drawable ic_account_circle_24
-drawable ic_app_info
 drawable ic_arrow_back_black_24
+drawable ic_check
 drawable ic_clear_black_24
 drawable ic_clock_black_24dp
 drawable ic_edit
+drawable ic_error
 drawable ic_favorite_24
 drawable ic_firebase_24
 drawable ic_flag_country
@@ -3198,10 +3202,15 @@ drawable ic_password
 drawable ic_popularity
 drawable ic_poster
 drawable ic_puntuation
+drawable ic_remove
 drawable ic_search_black_24
 drawable ic_star
 drawable ic_summary
 drawable ic_title
+drawable ironman
+drawable jake
+drawable jimmyneutron
+drawable krustytheclown
 drawable m3_appbar_background
 drawable m3_avd_hide_password
 drawable m3_avd_show_password
@@ -3213,6 +3222,7 @@ drawable m3_tabs_background
 drawable m3_tabs_line_indicator
 drawable m3_tabs_rounded_line_indicator
 drawable m3_tabs_transparent_background
+drawable mandalorian
 drawable material_cursor_drawable
 drawable material_ic_calendar_black_24dp
 drawable material_ic_clear_black_24dp
@@ -3261,6 +3271,7 @@ drawable mtrl_switch_thumb_unchecked_pressed
 drawable mtrl_switch_track
 drawable mtrl_switch_track_decoration
 drawable mtrl_tabs_default_indicator
+drawable naruto
 drawable navigation_empty_icon
 drawable notification_action_background
 drawable notification_bg
@@ -3278,11 +3289,16 @@ drawable palomitas
 drawable poster
 drawable poster1
 drawable red_button_background
+drawable scream
+drawable snowball
 drawable success_bow
 drawable success_circle
+drawable supermario
 drawable test_level_drawable
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
+drawable totoro
+drawable walterwhite
 drawable warning_circle
 drawable warning_sigh
 font cabin
@@ -3832,6 +3848,8 @@ id title
 id titleDividerNoCustom
 id title_template
 id title_text
+id toast_error
+id toast_success
 id toggle
 id top
 id topPanel
@@ -3848,6 +3866,8 @@ id tvAccountSettings
 id tvAgregarTVSerie
 id tvAppInfo
 id tvChangePassword
+id tvDetalleMovieOriginalLanguage
+id tvDetalleMovieOverview
 id tvDetalleMovieReleaseDate
 id tvDetalleMovieTitle
 id tvDetalleMovieVoteAverage
@@ -3857,16 +3877,19 @@ id tvDetalleTVSerieOriginalLanguage
 id tvDetalleTVSerieOverview
 id tvDetalleTVSeriePopularity
 id tvDetalleTVSerieVoteAverage
-id tvDetallesMovie
-id tvDetallesTVSerie
 id tvEditInfo
 id tvEmailMessages
 id tvIdiomaOriginal
+id tvMensajeToast1
+id tvMensajeToast2
 id tvNotifications
 id tvPaisOrigen
+id tvPeliculasEstreno
+id tvPeliculasFavoritas
 id tvPopularidad
 id tvPoster
 id tvPuntuacion
+id tvSeriesFirebase
 id tvSignOut
 id tvSinopsis
 id tvTitulo
@@ -3876,12 +3899,6 @@ id txt_copyright
 id txt_descripcion
 id txt_title
 id txt_version
-id txtmovierelease
-id txtmovietitle
-id txtserieoriginallanguage
-id txtserieorigincountry
-id txtseriepopularity
-id txtserietitle
 id txttitle
 id unchecked
 id uniform
@@ -4034,6 +4051,8 @@ layout alert_dialog
 layout browser_actions_context_menu_page
 layout browser_actions_context_menu_row
 layout custom_dialog
+layout custom_toast_error
+layout custom_toast_success
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
 layout design_layout_snackbar
@@ -5432,6 +5451,7 @@ style Widget_Support_CoordinatorLayout
 style alert_dialog_dark
 style alert_dialog_light
 style dialog_blue_button
+style roundImageView
 styleable ActionBar background backgroundSplit backgroundStacked contentInsetEnd contentInsetEndWithActions contentInsetLeft contentInsetRight contentInsetStart contentInsetStartWithNavigation customNavigationLayout displayOptions divider elevation height hideOnContentScroll homeAsUpIndicator homeLayout icon indeterminateProgressStyle itemPadding logo navigationMode popupTheme progressBarPadding progressBarStyle subtitle subtitleTextStyle title titleTextStyle
 styleable ActionBarLayout android_layout_gravity
 styleable ActionMenuItemView android_minWidth

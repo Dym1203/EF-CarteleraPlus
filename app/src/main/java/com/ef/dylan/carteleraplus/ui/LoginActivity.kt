@@ -21,6 +21,7 @@ import com.google.android.gms.common.api.ApiException
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.GoogleAuthProvider
 import com.google.firebase.auth.FirebaseAuthUserCollisionException
+import kotlin.system.exitProcess
 
 class LoginActivity : AppCompatActivity() {
 
@@ -59,7 +60,7 @@ class LoginActivity : AppCompatActivity() {
                     authenticateWithFirebase(account.idToken!!)
                 }
                 catch (e : Exception) {
-
+                    e.printStackTrace()
                 }
             }
         }
@@ -112,9 +113,10 @@ class LoginActivity : AppCompatActivity() {
                 loginWithEmailAndPassword(email, password)
             }
             else {
-                SweetAlertDialog(this, SweetAlertDialog.ERROR_TYPE)
+                SweetAlertDialog(this, SweetAlertDialog.CUSTOM_IMAGE_TYPE)
                     .setTitleText("¡Error!")
                     .setContentText("Por favor, completa todos los campos.")
+                    .setCustomImage(R.drawable.krustytheclown)
                     .setConfirmText("Cerrar")
                     .show()
             }
@@ -127,7 +129,17 @@ class LoginActivity : AppCompatActivity() {
         binding.btnSignUp.setOnClickListener {
             val password = binding.edtPassword.editableText.toString()
             val email = binding.edtEmail.editableText.toString()
-            signUpWithEmailAndPassword(email, password)
+            if (email.isNotEmpty() && password.isNotEmpty()) {
+                signUpWithEmailAndPassword(email, password)
+            }
+            else {
+                SweetAlertDialog(this, SweetAlertDialog.CUSTOM_IMAGE_TYPE)
+                    .setTitleText("¡Error!")
+                    .setContentText("Por favor, completa todos los campos.")
+                    .setCustomImage(R.drawable.krustytheclown)
+                    .setConfirmText("Cerrar")
+                    .show()
+            }
         }
     }
 
@@ -149,9 +161,10 @@ class LoginActivity : AppCompatActivity() {
                     saveUserLoggedInState()
                 }
                 else {
-                    SweetAlertDialog(this, SweetAlertDialog.ERROR_TYPE)
+                    SweetAlertDialog(this, SweetAlertDialog.CUSTOM_IMAGE_TYPE)
                         .setTitleText("¡Error!")
                         .setContentText("El usuario no se encuentra registrado.")
+                        .setCustomImage(R.drawable.krustytheclown)
                         .setConfirmText("Cerrar")
                         .show()
                 }
@@ -174,32 +187,36 @@ class LoginActivity : AppCompatActivity() {
                 .addOnCompleteListener { task ->
                     if (task.isSuccessful) {
                         val user = firebaseAuth.currentUser
-                        SweetAlertDialog(this, SweetAlertDialog.SUCCESS_TYPE)
+                        SweetAlertDialog(this, SweetAlertDialog.CUSTOM_IMAGE_TYPE)
                             .setTitleText("¡Éxito!")
                             .setContentText("El usuario fue registrado correctamente.")
+                            .setCustomImage(R.drawable.naruto)
                             .setConfirmText("Cerrar")
                             .show()
                     } else {
                         val exception = task.exception
                         if (exception is FirebaseAuthUserCollisionException) {
-                            SweetAlertDialog(this, SweetAlertDialog.ERROR_TYPE)
+                            SweetAlertDialog(this, SweetAlertDialog.CUSTOM_IMAGE_TYPE)
                                 .setTitleText("¡Error!")
                                 .setContentText("El usuario ya está registrado.")
+                                .setCustomImage(R.drawable.krustytheclown)
                                 .setConfirmText("Cerrar")
                                 .show()
                         } else {
-                            SweetAlertDialog(this, SweetAlertDialog.ERROR_TYPE)
+                            SweetAlertDialog(this, SweetAlertDialog.CUSTOM_IMAGE_TYPE)
                                 .setTitleText("¡Error!")
                                 .setContentText("No es posible registrar al usuario.")
+                                .setCustomImage(R.drawable.krustytheclown)
                                 .setConfirmText("Cerrar")
                                 .show()
                         }
                     }
                 }
         } else {
-            SweetAlertDialog(this, SweetAlertDialog.ERROR_TYPE)
+            SweetAlertDialog(this, SweetAlertDialog.CUSTOM_IMAGE_TYPE)
                 .setTitleText("¡Error!")
                 .setContentText("No son credenciales válidas.")
+                .setCustomImage(R.drawable.krustytheclown)
                 .setConfirmText("Cerrar")
                 .show()
         }
@@ -241,19 +258,19 @@ class LoginActivity : AppCompatActivity() {
             this, SweetAlertDialog.WARNING_TYPE
         ).setTitleText("¡Has oprimido el botón atrás!")
             .setContentText("¿Quieres cerrar la aplicación?")
-            .setCancelText("Cancelar").setConfirmText("Cerrar")
+            .setCancelText("Cancelar").setConfirmText("Salir")
             .showCancelButton(true).setCancelClickListener { sDialog: SweetAlertDialog ->
                 sDialog.dismissWithAnimation()
                 SweetAlertDialog(
                     this,
                     SweetAlertDialog.ERROR_TYPE
                 ).setTitleText("¡Operación Cancelada!")
-                    .setContentText("¡No saliste de la aplicación!")
-                    .setConfirmText("Aceptar")
+                    .setContentText("No saliste de la aplicación.")
+                    .setConfirmText("Cerrar")
                     .show()
             }.setConfirmClickListener { sweetAlertDialog: SweetAlertDialog ->
                 sweetAlertDialog.dismissWithAnimation()
-                System.exit(0)
+                exitProcess(0)
             }.show()
     }
 

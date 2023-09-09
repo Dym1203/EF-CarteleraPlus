@@ -1,5 +1,9 @@
 [
     {
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\7.5\\com.ef.dylan.carteleraplus.app-merged_res-62:\\drawable_mandalorian.png.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\7.5\\com.ef.dylan.carteleraplus.app-main-64:\\drawable\\mandalorian.png"
+    },
+    {
         "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\7.5\\com.ef.dylan.carteleraplus.app-merged_res-62:\\drawable_ic_format_list_bulleted_24.xml.flat",
         "source": "C:\\Users\\Usuario\\.gradle\\daemon\\7.5\\com.ef.dylan.carteleraplus.app-main-64:\\drawable\\ic_format_list_bulleted_24.xml"
     },
@@ -20,8 +24,16 @@
         "source": "C:\\Users\\Usuario\\.gradle\\daemon\\7.5\\com.ef.dylan.carteleraplus.app-main-64:\\drawable\\ic_popularity.xml"
     },
     {
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\7.5\\com.ef.dylan.carteleraplus.app-merged_res-62:\\drawable_bender.png.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\7.5\\com.ef.dylan.carteleraplus.app-main-64:\\drawable\\bender.png"
+    },
+    {
         "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\7.5\\com.ef.dylan.carteleraplus.app-merged_res-62:\\mipmap-xxxhdpi_ic_launcher.png.flat",
         "source": "C:\\Users\\Usuario\\.gradle\\daemon\\7.5\\com.ef.dylan.carteleraplus.app-main-64:\\mipmap-xxxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\7.5\\com.ef.dylan.carteleraplus.app-merged_res-62:\\layout_custom_toast_error.xml.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\7.5\\com.ef.dylan.carteleraplus.app-main-64:\\layout\\custom_toast_error.xml"
     },
     {
         "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\7.5\\com.ef.dylan.carteleraplus.app-merged_res-62:\\drawable_ic_favorite_24.xml.flat",
@@ -42,6 +54,14 @@
     {
         "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\7.5\\com.ef.dylan.carteleraplus.app-merged_res-62:\\drawable_baseline_lock_24.xml.flat",
         "source": "C:\\Users\\Usuario\\.gradle\\daemon\\7.5\\com.ef.dylan.carteleraplus.app-main-64:\\drawable\\baseline_lock_24.xml"
+    },
+    {
+        "merged": "com.ef.dylan.carteleraplus.app-merged_res-62:/layout_activity_add_tvserie.xml.flat",
+        "source": "com.ef.dylan.carteleraplus.app-main-64:/layout/activity_add_tvserie.xml"
+    },
+    {
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\7.5\\com.ef.dylan.carteleraplus.app-merged_res-62:\\drawable_krustytheclown.png.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\7.5\\com.ef.dylan.carteleraplus.app-main-64:\\drawable\\krustytheclown.png"
     },
     {
         "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\7.5\\com.ef.dylan.carteleraplus.app-merged_res-62:\\drawable_ic_info.xml.flat",
@@ -68,8 +88,16 @@
         "source": "C:\\Users\\Usuario\\.gradle\\daemon\\7.5\\com.ef.dylan.carteleraplus.app-main-64:\\mipmap-xxhdpi\\ic_launcher_foreground.png"
     },
     {
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\7.5\\com.ef.dylan.carteleraplus.app-merged_res-62:\\drawable_walterwhite.png.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\7.5\\com.ef.dylan.carteleraplus.app-main-64:\\drawable\\walterwhite.png"
+    },
+    {
         "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\7.5\\com.ef.dylan.carteleraplus.app-merged_res-62:\\mipmap-xhdpi_ic_launcher.png.flat",
         "source": "C:\\Users\\Usuario\\.gradle\\daemon\\7.5\\com.ef.dylan.carteleraplus.app-main-64:\\mipmap-xhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\7.5\\com.ef.dylan.carteleraplus.app-merged_res-62:\\drawable_jimmyneutron.png.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\7.5\\com.ef.dylan.carteleraplus.app-main-64:\\drawable\\jimmyneutron.png"
     },
     {
         "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\7.5\\com.ef.dylan.carteleraplus.app-merged_res-62:\\layout_item_movie.xml.flat",
@@ -90,10 +118,6 @@
     {
         "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\7.5\\com.ef.dylan.carteleraplus.app-merged_res-62:\\drawable_custom_input.xml.flat",
         "source": "C:\\Users\\Usuario\\.gradle\\daemon\\7.5\\com.ef.dylan.carteleraplus.app-main-64:\\drawable\\custom_input.xml"
-    },
-    {
-        "merged": "com.ef.dylan.carteleraplus.app-merged_res-62:/layout_fragment_movie_detail.xml.flat",
-        "source": "com.ef.dylan.carteleraplus.app-main-64:/layout/fragment_movie_detail.xml"
     },
     {
         "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\7.5\\com.ef.dylan.carteleraplus.app-merged_res-62:\\layout_item_tvserie.xml.flat",
@@ -136,8 +160,16 @@
         "source": "C:\\Users\\Usuario\\.gradle\\daemon\\7.5\\com.ef.dylan.carteleraplus.app-main-64:\\mipmap-mdpi\\ic_launcher_foreground.png"
     },
     {
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\7.5\\com.ef.dylan.carteleraplus.app-merged_res-62:\\drawable_jake.png.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\7.5\\com.ef.dylan.carteleraplus.app-main-64:\\drawable\\jake.png"
+    },
+    {
         "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\7.5\\com.ef.dylan.carteleraplus.app-merged_res-62:\\drawable_comidacine.png.flat",
         "source": "C:\\Users\\Usuario\\.gradle\\daemon\\7.5\\com.ef.dylan.carteleraplus.app-main-64:\\drawable\\comidacine.png"
+    },
+    {
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\7.5\\com.ef.dylan.carteleraplus.app-merged_res-62:\\drawable_anonymous.png.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\7.5\\com.ef.dylan.carteleraplus.app-main-64:\\drawable\\anonymous.png"
     },
     {
         "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\7.5\\com.ef.dylan.carteleraplus.app-merged_res-62:\\drawable_mistake.png.flat",
@@ -156,12 +188,12 @@
         "source": "C:\\Users\\Usuario\\.gradle\\daemon\\7.5\\com.ef.dylan.carteleraplus.app-main-64:\\layout\\fragment_movie_listado.xml"
     },
     {
-        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\7.5\\com.ef.dylan.carteleraplus.app-merged_res-62:\\drawable_ic_summary.xml.flat",
-        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\7.5\\com.ef.dylan.carteleraplus.app-main-64:\\drawable\\ic_summary.xml"
-    },
-    {
         "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\7.5\\com.ef.dylan.carteleraplus.app-merged_res-62:\\layout_fragment_movie_favorite.xml.flat",
         "source": "C:\\Users\\Usuario\\.gradle\\daemon\\7.5\\com.ef.dylan.carteleraplus.app-main-64:\\layout\\fragment_movie_favorite.xml"
+    },
+    {
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\7.5\\com.ef.dylan.carteleraplus.app-merged_res-62:\\drawable_ic_summary.xml.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\7.5\\com.ef.dylan.carteleraplus.app-main-64:\\drawable\\ic_summary.xml"
     },
     {
         "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\7.5\\com.ef.dylan.carteleraplus.app-merged_res-62:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
@@ -200,16 +232,36 @@
         "source": "C:\\Users\\Usuario\\.gradle\\daemon\\7.5\\com.ef.dylan.carteleraplus.app-main-64:\\drawable\\ic_movie_filter_24.xml"
     },
     {
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\7.5\\com.ef.dylan.carteleraplus.app-merged_res-62:\\drawable_scream.png.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\7.5\\com.ef.dylan.carteleraplus.app-main-64:\\drawable\\scream.png"
+    },
+    {
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\7.5\\com.ef.dylan.carteleraplus.app-merged_res-62:\\drawable_homersimpson.png.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\7.5\\com.ef.dylan.carteleraplus.app-main-64:\\drawable\\homersimpson.png"
+    },
+    {
         "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\7.5\\com.ef.dylan.carteleraplus.app-merged_res-62:\\drawable_cineinicio.png.flat",
         "source": "C:\\Users\\Usuario\\.gradle\\daemon\\7.5\\com.ef.dylan.carteleraplus.app-main-64:\\drawable\\cineinicio.png"
+    },
+    {
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\7.5\\com.ef.dylan.carteleraplus.app-merged_res-62:\\layout_custom_toast_success.xml.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\7.5\\com.ef.dylan.carteleraplus.app-main-64:\\layout\\custom_toast_success.xml"
     },
     {
         "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\7.5\\com.ef.dylan.carteleraplus.app-merged_res-62:\\drawable_poster.png.flat",
         "source": "C:\\Users\\Usuario\\.gradle\\daemon\\7.5\\com.ef.dylan.carteleraplus.app-main-64:\\drawable\\poster.png"
     },
     {
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\7.5\\com.ef.dylan.carteleraplus.app-merged_res-62:\\drawable_ic_check.xml.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\7.5\\com.ef.dylan.carteleraplus.app-main-64:\\drawable\\ic_check.xml"
+    },
+    {
         "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\7.5\\com.ef.dylan.carteleraplus.app-merged_res-62:\\drawable_ic_flag_country.xml.flat",
         "source": "C:\\Users\\Usuario\\.gradle\\daemon\\7.5\\com.ef.dylan.carteleraplus.app-main-64:\\drawable\\ic_flag_country.xml"
+    },
+    {
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\7.5\\com.ef.dylan.carteleraplus.app-merged_res-62:\\drawable_supermario.png.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\7.5\\com.ef.dylan.carteleraplus.app-main-64:\\drawable\\supermario.png"
     },
     {
         "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\7.5\\com.ef.dylan.carteleraplus.app-merged_res-62:\\drawable_ic_poster.xml.flat",
@@ -218,6 +270,10 @@
     {
         "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\7.5\\com.ef.dylan.carteleraplus.app-merged_res-62:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
         "source": "C:\\Users\\Usuario\\.gradle\\daemon\\7.5\\com.ef.dylan.carteleraplus.app-main-64:\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\7.5\\com.ef.dylan.carteleraplus.app-merged_res-62:\\drawable_snowball.png.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\7.5\\com.ef.dylan.carteleraplus.app-main-64:\\drawable\\snowball.png"
     },
     {
         "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\7.5\\com.ef.dylan.carteleraplus.app-merged_res-62:\\mipmap-xxhdpi_ic_launcher_round.png.flat",
@@ -240,8 +296,20 @@
         "source": "C:\\Users\\Usuario\\.gradle\\daemon\\7.5\\com.ef.dylan.carteleraplus.app-main-64:\\layout\\activity_login.xml"
     },
     {
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\7.5\\com.ef.dylan.carteleraplus.app-merged_res-62:\\drawable_ic_remove.xml.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\7.5\\com.ef.dylan.carteleraplus.app-main-64:\\drawable\\ic_remove.xml"
+    },
+    {
         "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\7.5\\com.ef.dylan.carteleraplus.app-merged_res-62:\\drawable_ic_google.xml.flat",
         "source": "C:\\Users\\Usuario\\.gradle\\daemon\\7.5\\com.ef.dylan.carteleraplus.app-main-64:\\drawable\\ic_google.xml"
+    },
+    {
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\7.5\\com.ef.dylan.carteleraplus.app-merged_res-62:\\drawable_ironman.png.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\7.5\\com.ef.dylan.carteleraplus.app-main-64:\\drawable\\ironman.png"
+    },
+    {
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\7.5\\com.ef.dylan.carteleraplus.app-merged_res-62:\\drawable_totoro.png.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\7.5\\com.ef.dylan.carteleraplus.app-main-64:\\drawable\\totoro.png"
     },
     {
         "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\7.5\\com.ef.dylan.carteleraplus.app-merged_res-62:\\mipmap-hdpi_ic_launcher_foreground.png.flat",
@@ -264,12 +332,20 @@
         "source": "C:\\Users\\Usuario\\.gradle\\daemon\\7.5\\com.ef.dylan.carteleraplus.app-main-64:\\drawable-v24\\ic_launcher_foreground.xml"
     },
     {
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\7.5\\com.ef.dylan.carteleraplus.app-merged_res-62:\\drawable_naruto.png.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\7.5\\com.ef.dylan.carteleraplus.app-main-64:\\drawable\\naruto.png"
+    },
+    {
         "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\7.5\\com.ef.dylan.carteleraplus.app-merged_res-62:\\layout_fragment_tv_serie_detail.xml.flat",
         "source": "C:\\Users\\Usuario\\.gradle\\daemon\\7.5\\com.ef.dylan.carteleraplus.app-main-64:\\layout\\fragment_tv_serie_detail.xml"
     },
     {
         "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\7.5\\com.ef.dylan.carteleraplus.app-merged_res-62:\\drawable_ic_live_tv.xml.flat",
         "source": "C:\\Users\\Usuario\\.gradle\\daemon\\7.5\\com.ef.dylan.carteleraplus.app-main-64:\\drawable\\ic_live_tv.xml"
+    },
+    {
+        "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\7.5\\com.ef.dylan.carteleraplus.app-merged_res-62:\\drawable_ic_error.xml.flat",
+        "source": "C:\\Users\\Usuario\\.gradle\\daemon\\7.5\\com.ef.dylan.carteleraplus.app-main-64:\\drawable\\ic_error.xml"
     },
     {
         "merged": "C:\\Users\\Usuario\\.gradle\\daemon\\7.5\\com.ef.dylan.carteleraplus.app-merged_res-62:\\drawable_ic_puntuation.xml.flat",

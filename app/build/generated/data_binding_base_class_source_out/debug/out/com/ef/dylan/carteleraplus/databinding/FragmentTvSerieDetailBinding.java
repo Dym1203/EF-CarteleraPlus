@@ -4,7 +4,6 @@ package com.ef.dylan.carteleraplus.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -12,6 +11,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.ef.dylan.carteleraplus.R;
+import com.google.android.material.imageview.ShapeableImageView;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class FragmentTvSerieDetailBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
-  public final ImageView imgDetalleTVSeriePosterPath;
+  public final ShapeableImageView imgDetalleTVSeriePosterPath;
 
   @NonNull
   public final TextView tvDetalleTVSerieName;
@@ -41,15 +41,12 @@ public final class FragmentTvSerieDetailBinding implements ViewBinding {
   @NonNull
   public final TextView tvDetalleTVSerieVoteAverage;
 
-  @NonNull
-  public final TextView tvDetallesTVSerie;
-
   private FragmentTvSerieDetailBinding(@NonNull ConstraintLayout rootView,
-      @NonNull ImageView imgDetalleTVSeriePosterPath, @NonNull TextView tvDetalleTVSerieName,
-      @NonNull TextView tvDetalleTVSerieOriginCountry,
+      @NonNull ShapeableImageView imgDetalleTVSeriePosterPath,
+      @NonNull TextView tvDetalleTVSerieName, @NonNull TextView tvDetalleTVSerieOriginCountry,
       @NonNull TextView tvDetalleTVSerieOriginalLanguage,
       @NonNull TextView tvDetalleTVSerieOverview, @NonNull TextView tvDetalleTVSeriePopularity,
-      @NonNull TextView tvDetalleTVSerieVoteAverage, @NonNull TextView tvDetallesTVSerie) {
+      @NonNull TextView tvDetalleTVSerieVoteAverage) {
     this.rootView = rootView;
     this.imgDetalleTVSeriePosterPath = imgDetalleTVSeriePosterPath;
     this.tvDetalleTVSerieName = tvDetalleTVSerieName;
@@ -58,7 +55,6 @@ public final class FragmentTvSerieDetailBinding implements ViewBinding {
     this.tvDetalleTVSerieOverview = tvDetalleTVSerieOverview;
     this.tvDetalleTVSeriePopularity = tvDetalleTVSeriePopularity;
     this.tvDetalleTVSerieVoteAverage = tvDetalleTVSerieVoteAverage;
-    this.tvDetallesTVSerie = tvDetallesTVSerie;
   }
 
   @Override
@@ -89,7 +85,7 @@ public final class FragmentTvSerieDetailBinding implements ViewBinding {
     int id;
     missingId: {
       id = R.id.imgDetalleTVSeriePosterPath;
-      ImageView imgDetalleTVSeriePosterPath = ViewBindings.findChildViewById(rootView, id);
+      ShapeableImageView imgDetalleTVSeriePosterPath = ViewBindings.findChildViewById(rootView, id);
       if (imgDetalleTVSeriePosterPath == null) {
         break missingId;
       }
@@ -130,16 +126,10 @@ public final class FragmentTvSerieDetailBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.tvDetallesTVSerie;
-      TextView tvDetallesTVSerie = ViewBindings.findChildViewById(rootView, id);
-      if (tvDetallesTVSerie == null) {
-        break missingId;
-      }
-
       return new FragmentTvSerieDetailBinding((ConstraintLayout) rootView,
           imgDetalleTVSeriePosterPath, tvDetalleTVSerieName, tvDetalleTVSerieOriginCountry,
           tvDetalleTVSerieOriginalLanguage, tvDetalleTVSerieOverview, tvDetalleTVSeriePopularity,
-          tvDetalleTVSerieVoteAverage, tvDetallesTVSerie);
+          tvDetalleTVSerieVoteAverage);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

@@ -4,8 +4,6 @@ package com.ef.dylan.carteleraplus.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.cardview.widget.CardView;
@@ -13,6 +11,7 @@ import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import antonkozyriatskyi.circularprogressindicator.CircularProgressIndicator;
 import com.ef.dylan.carteleraplus.R;
+import com.google.android.material.imageview.ShapeableImageView;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
@@ -28,24 +27,15 @@ public final class ItemMovieBinding implements ViewBinding {
   public final CardView cvItemMovie;
 
   @NonNull
-  public final ImageView imgmovieposter;
-
-  @NonNull
-  public final TextView txtmovierelease;
-
-  @NonNull
-  public final TextView txtmovietitle;
+  public final ShapeableImageView imgmovieposter;
 
   private ItemMovieBinding(@NonNull CardView rootView,
       @NonNull CircularProgressIndicator cpiPuntuacion, @NonNull CardView cvItemMovie,
-      @NonNull ImageView imgmovieposter, @NonNull TextView txtmovierelease,
-      @NonNull TextView txtmovietitle) {
+      @NonNull ShapeableImageView imgmovieposter) {
     this.rootView = rootView;
     this.cpiPuntuacion = cpiPuntuacion;
     this.cvItemMovie = cvItemMovie;
     this.imgmovieposter = imgmovieposter;
-    this.txtmovierelease = txtmovierelease;
-    this.txtmovietitle = txtmovietitle;
   }
 
   @Override
@@ -84,25 +74,12 @@ public final class ItemMovieBinding implements ViewBinding {
       CardView cvItemMovie = (CardView) rootView;
 
       id = R.id.imgmovieposter;
-      ImageView imgmovieposter = ViewBindings.findChildViewById(rootView, id);
+      ShapeableImageView imgmovieposter = ViewBindings.findChildViewById(rootView, id);
       if (imgmovieposter == null) {
         break missingId;
       }
 
-      id = R.id.txtmovierelease;
-      TextView txtmovierelease = ViewBindings.findChildViewById(rootView, id);
-      if (txtmovierelease == null) {
-        break missingId;
-      }
-
-      id = R.id.txtmovietitle;
-      TextView txtmovietitle = ViewBindings.findChildViewById(rootView, id);
-      if (txtmovietitle == null) {
-        break missingId;
-      }
-
-      return new ItemMovieBinding((CardView) rootView, cpiPuntuacion, cvItemMovie, imgmovieposter,
-          txtmovierelease, txtmovietitle);
+      return new ItemMovieBinding((CardView) rootView, cpiPuntuacion, cvItemMovie, imgmovieposter);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

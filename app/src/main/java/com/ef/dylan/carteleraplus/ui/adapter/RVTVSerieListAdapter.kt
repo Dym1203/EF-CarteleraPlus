@@ -33,16 +33,11 @@ class RVTVSerieListAdapter(var series : List<TVSerie>, val onTVSerieClick: (TVSe
 
 class TVSerieViewHolder(private val binding : ItemTvserieBinding, val onTVSerieClick: (TVSerie) -> Unit) : RecyclerView.ViewHolder(binding.root) {
     fun bind (tvserie : TVSerie) {
-        binding.txtserietitle.text = tvserie.titulo
-        binding.txtserieoriginallanguage.text = "Idioma: ${tvserie.idioma}"
-        binding.txtseriepopularity.text = "Popularidad: ${tvserie.popularidad}"
         binding.cpiPuntuacionSerie.maxProgress = 10.0
         binding.cpiPuntuacionSerie.setCurrentProgress(tvserie.puntuacion)
-        binding.txtserieorigincountry.text = "País: ${tvserie.pais}"
         /*Glide*/
         Glide.with(binding.root)
             .load(tvserie.poster)
-            .override(200, 250)
             .error(R.drawable.mistake)
             .into(binding.imgserieposter)
         binding.root.setOnClickListener {

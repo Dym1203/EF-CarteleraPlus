@@ -3,18 +3,18 @@
 
     <item android:id="@id/movieListadoFragment"
         android:title="Películas"
-        android:icon="@drawable/ic_movie_filter_24" />
+        android:icon="@drawable/supermario" />
 
     <item android:id="@id/movieFavoriteFragment"
         android:title="Favoritos"
-        android:icon="@drawable/ic_favorite_24" />
+        android:icon="@drawable/bender" />
 
     <item android:id="@id/firebaseMovieFragment"
         android:title="Firebase"
-        android:icon="@drawable/ic_firebase_24" />
+        android:icon="@drawable/walterwhite" />
 
     <item android:id="@id/cuentaFragment"
         android:title="Cuenta"
-        android:icon="@drawable/ic_account_circle_24" />
+        android:icon="@drawable/anonymous" />
 
 </menu>

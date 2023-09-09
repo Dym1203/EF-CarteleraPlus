@@ -2,12 +2,13 @@ package com.ef.dylan.carteleraplus.ui.fragments
 
 import android.content.Context
 import android.content.Intent
-import android.content.pm.PackageManager
 import android.os.Bundle
+import android.view.Gravity
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import android.widget.Toast
 import cn.pedant.SweetAlert.SweetAlertDialog
 import com.ef.dylan.carteleraplus.R
@@ -32,6 +33,22 @@ class CuentaFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         firebaseAuth = FirebaseAuth.getInstance()
+        binding.tvEditInfo.setOnClickListener {
+            SweetAlertDialog(requireContext(), SweetAlertDialog.CUSTOM_IMAGE_TYPE)
+                .setTitleText("Éxito")
+                .setContentText("¡Se ha cambiado sus datos correctamente!")
+                .setCustomImage(R.drawable.jake)
+                .setConfirmText("Cerrar")
+                .show()
+        }
+        binding.tvChangePassword.setOnClickListener {
+            SweetAlertDialog(requireContext(), SweetAlertDialog.CUSTOM_IMAGE_TYPE)
+                .setTitleText("Éxito")
+                .setContentText("¡Se ha restablecido su contraseña correctamente!")
+                .setCustomImage(R.drawable.jimmyneutron)
+                .setConfirmText("Cerrar")
+                .show()
+        }
         binding.tvAppInfo.setOnClickListener {
             showAppInfo()
         }
@@ -40,26 +57,26 @@ class CuentaFragment : Fragment() {
         }
         binding.btnInformacion.setOnClickListener {
             SweetAlertDialog(requireContext(), SweetAlertDialog.CUSTOM_IMAGE_TYPE)
-                .setTitleText("¡Muchas gracias!")
-                .setContentText(("Por revisar mi aplicación."))
-                .setCustomImage(R.drawable.ic_star)
+                .setTitleText("Muchas gracias")
+                .setContentText("¡Por revisar mi aplicación!")
+                .setCustomImage(R.drawable.ironman)
                 .setConfirmText("Cerrar")
                 .show()
         }
         binding.switchNotifications.setOnCheckedChangeListener { _ , isChecked ->
             if (isChecked) {
-                Toast.makeText(requireContext(), "¡Notificaciones Activadas!", Toast.LENGTH_SHORT).show()
+                toastCorrecto("¡Notificaciones habilitadas!")
             }
             else {
-                Toast.makeText(requireContext(), "¡Notificaciones Desactivadas!", Toast.LENGTH_SHORT).show()
+                toastError("¡Notificaciones deshabilitadas!")
             }
         }
         binding.switchEmailMessages.setOnCheckedChangeListener { _ , isChecked ->
             if (isChecked) {
-                Toast.makeText(requireContext(), "¡Mensajes por Email Activados!", Toast.LENGTH_SHORT).show()
+                toastCorrecto("¡Mensajes por email habilitados!")
             }
             else {
-                Toast.makeText(requireContext(), "¡Mensajes por Email Desactivados!", Toast.LENGTH_SHORT).show()
+                toastError("¡Mensajes por email deshabilitados!")
             }
         }
     }
@@ -74,9 +91,35 @@ class CuentaFragment : Fragment() {
         SweetAlertDialog(requireContext(), SweetAlertDialog.CUSTOM_IMAGE_TYPE)
             .setTitleText("Información de la Aplicación")
             .setContentText(fullInfoMessage)
-            .setCustomImage(R.drawable.ic_app_info)
+            .setCustomImage(R.drawable.totoro)
             .setConfirmText("Cerrar")
             .show()
+    }
+
+    private fun toastCorrecto(mensaje: String) {
+        val layoutInflater = LayoutInflater.from(requireContext())
+        val view = layoutInflater.inflate(R.layout.custom_toast_success, requireView().findViewById(R.id.toast_success))
+        val tvMensaje = view.findViewById<TextView>(R.id.tvMensajeToast1)
+        tvMensaje.text = mensaje
+
+        val toast = Toast(requireContext())
+        toast.setGravity(Gravity.CENTER_VERTICAL or Gravity.BOTTOM, 0, 200)
+        toast.duration = Toast.LENGTH_SHORT
+        toast.view = view
+        toast.show()
+    }
+
+    private fun toastError(mensaje: String) {
+        val layoutInflater = LayoutInflater.from(requireContext())
+        val view = layoutInflater.inflate(R.layout.custom_toast_error, requireView().findViewById(R.id.toast_error))
+        val tvMensaje = view.findViewById<TextView>(R.id.tvMensajeToast2)
+        tvMensaje.text = mensaje
+
+        val toast = Toast(requireContext())
+        toast.setGravity(Gravity.CENTER_VERTICAL or Gravity.BOTTOM, 0, 200)
+        toast.duration = Toast.LENGTH_SHORT
+        toast.view = view
+        toast.show()
     }
 
     private fun signOut() {

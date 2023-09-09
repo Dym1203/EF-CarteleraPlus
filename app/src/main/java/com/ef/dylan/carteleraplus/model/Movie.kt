@@ -13,6 +13,10 @@ data class Movie(
     val id : Int,
     @SerializedName("original_title")
     var titulo : String,
+    @SerializedName("overview")
+    var sinopsis : String,
+    @SerializedName("original_language")
+    var idioma : String,
     @SerializedName("poster_path")
     var poster: String,
     @SerializedName("release_date")

@@ -39,7 +39,7 @@ public final class MovieDao_Impl implements MovieDao {
     this.__insertionAdapterOfMovie = new EntityInsertionAdapter<Movie>(__db) {
       @Override
       public String createQuery() {
-        return "INSERT OR ABORT INTO `movie` (`id`,`titulo`,`poster`,`fechaLanzamiento`,`puntuacion`,`isFavorite`) VALUES (nullif(?, 0),?,?,?,?,?)";
+        return "INSERT OR ABORT INTO `movie` (`id`,`titulo`,`sinopsis`,`idioma`,`poster`,`fechaLanzamiento`,`puntuacion`,`isFavorite`) VALUES (nullif(?, 0),?,?,?,?,?,?,?)";
       }
 
       @Override
@@ -50,19 +50,29 @@ public final class MovieDao_Impl implements MovieDao {
         } else {
           stmt.bindString(2, value.getTitulo());
         }
-        if (value.getPoster() == null) {
+        if (value.getSinopsis() == null) {
           stmt.bindNull(3);
         } else {
-          stmt.bindString(3, value.getPoster());
+          stmt.bindString(3, value.getSinopsis());
         }
-        if (value.getFechaLanzamiento() == null) {
+        if (value.getIdioma() == null) {
           stmt.bindNull(4);
         } else {
-          stmt.bindString(4, value.getFechaLanzamiento());
+          stmt.bindString(4, value.getIdioma());
         }
-        stmt.bindDouble(5, value.getPuntuacion());
+        if (value.getPoster() == null) {
+          stmt.bindNull(5);
+        } else {
+          stmt.bindString(5, value.getPoster());
+        }
+        if (value.getFechaLanzamiento() == null) {
+          stmt.bindNull(6);
+        } else {
+          stmt.bindString(6, value.getFechaLanzamiento());
+        }
+        stmt.bindDouble(7, value.getPuntuacion());
         final int _tmp = value.isFavorite() ? 1 : 0;
-        stmt.bindLong(6, _tmp);
+        stmt.bindLong(8, _tmp);
       }
     };
     this.__deletionAdapterOfMovie = new EntityDeletionOrUpdateAdapter<Movie>(__db) {
@@ -126,6 +136,8 @@ public final class MovieDao_Impl implements MovieDao {
         try {
           final int _cursorIndexOfId = CursorUtil.getColumnIndexOrThrow(_cursor, "id");
           final int _cursorIndexOfTitulo = CursorUtil.getColumnIndexOrThrow(_cursor, "titulo");
+          final int _cursorIndexOfSinopsis = CursorUtil.getColumnIndexOrThrow(_cursor, "sinopsis");
+          final int _cursorIndexOfIdioma = CursorUtil.getColumnIndexOrThrow(_cursor, "idioma");
           final int _cursorIndexOfPoster = CursorUtil.getColumnIndexOrThrow(_cursor, "poster");
           final int _cursorIndexOfFechaLanzamiento = CursorUtil.getColumnIndexOrThrow(_cursor, "fechaLanzamiento");
           final int _cursorIndexOfPuntuacion = CursorUtil.getColumnIndexOrThrow(_cursor, "puntuacion");
@@ -140,6 +152,18 @@ public final class MovieDao_Impl implements MovieDao {
               _tmpTitulo = null;
             } else {
               _tmpTitulo = _cursor.getString(_cursorIndexOfTitulo);
+            }
+            final String _tmpSinopsis;
+            if (_cursor.isNull(_cursorIndexOfSinopsis)) {
+              _tmpSinopsis = null;
+            } else {
+              _tmpSinopsis = _cursor.getString(_cursorIndexOfSinopsis);
+            }
+            final String _tmpIdioma;
+            if (_cursor.isNull(_cursorIndexOfIdioma)) {
+              _tmpIdioma = null;
+            } else {
+              _tmpIdioma = _cursor.getString(_cursorIndexOfIdioma);
             }
             final String _tmpPoster;
             if (_cursor.isNull(_cursorIndexOfPoster)) {
@@ -159,7 +183,7 @@ public final class MovieDao_Impl implements MovieDao {
             final int _tmp;
             _tmp = _cursor.getInt(_cursorIndexOfIsFavorite);
             _tmpIsFavorite = _tmp != 0;
-            _item = new Movie(_tmpId,_tmpTitulo,_tmpPoster,_tmpFechaLanzamiento,_tmpPuntuacion,_tmpIsFavorite);
+            _item = new Movie(_tmpId,_tmpTitulo,_tmpSinopsis,_tmpIdioma,_tmpPoster,_tmpFechaLanzamiento,_tmpPuntuacion,_tmpIsFavorite);
             _result.add(_item);
           }
           return _result;

@@ -37,9 +37,9 @@ public final class MovieDatabase_Impl extends MovieDatabase {
     final SupportSQLiteOpenHelper.Callback _openCallback = new RoomOpenHelper(configuration, new RoomOpenHelper.Delegate(1) {
       @Override
       public void createAllTables(SupportSQLiteDatabase _db) {
-        _db.execSQL("CREATE TABLE IF NOT EXISTS `movie` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `titulo` TEXT NOT NULL, `poster` TEXT NOT NULL, `fechaLanzamiento` TEXT NOT NULL, `puntuacion` REAL NOT NULL, `isFavorite` INTEGER NOT NULL)");
+        _db.execSQL("CREATE TABLE IF NOT EXISTS `movie` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `titulo` TEXT NOT NULL, `sinopsis` TEXT NOT NULL, `idioma` TEXT NOT NULL, `poster` TEXT NOT NULL, `fechaLanzamiento` TEXT NOT NULL, `puntuacion` REAL NOT NULL, `isFavorite` INTEGER NOT NULL)");
         _db.execSQL("CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)");
-        _db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '7c3a78dab0c996c79af2fa5aad9f3de4')");
+        _db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '1aadd2bc476f908168cfdd50480db35e')");
       }
 
       @Override
@@ -83,9 +83,11 @@ public final class MovieDatabase_Impl extends MovieDatabase {
 
       @Override
       public RoomOpenHelper.ValidationResult onValidateSchema(SupportSQLiteDatabase _db) {
-        final HashMap<String, TableInfo.Column> _columnsMovie = new HashMap<String, TableInfo.Column>(6);
+        final HashMap<String, TableInfo.Column> _columnsMovie = new HashMap<String, TableInfo.Column>(8);
         _columnsMovie.put("id", new TableInfo.Column("id", "INTEGER", true, 1, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsMovie.put("titulo", new TableInfo.Column("titulo", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsMovie.put("sinopsis", new TableInfo.Column("sinopsis", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsMovie.put("idioma", new TableInfo.Column("idioma", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsMovie.put("poster", new TableInfo.Column("poster", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsMovie.put("fechaLanzamiento", new TableInfo.Column("fechaLanzamiento", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsMovie.put("puntuacion", new TableInfo.Column("puntuacion", "REAL", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
@@ -101,7 +103,7 @@ public final class MovieDatabase_Impl extends MovieDatabase {
         }
         return new RoomOpenHelper.ValidationResult(true, null);
       }
-    }, "7c3a78dab0c996c79af2fa5aad9f3de4", "d551ea6c6e268f6aeae8be585c225bd8");
+    }, "1aadd2bc476f908168cfdd50480db35e", "b955adc5612ad368c25ba293d81e3c52");
     final SupportSQLiteOpenHelper.Configuration _sqliteConfig = SupportSQLiteOpenHelper.Configuration.builder(configuration.context)
         .name(configuration.name)
         .callback(_openCallback)

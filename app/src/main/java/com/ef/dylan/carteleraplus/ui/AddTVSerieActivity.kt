@@ -7,11 +7,13 @@ import android.content.pm.PackageManager
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Gravity
+import android.view.LayoutInflater
 import android.widget.ArrayAdapter
+import android.widget.TextView
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
-import cn.pedant.SweetAlert.SweetAlertDialog
 import com.bumptech.glide.Glide
 import com.ef.dylan.carteleraplus.R
 import com.ef.dylan.carteleraplus.databinding.ActivityAddTvserieBinding
@@ -126,29 +128,17 @@ class AddTVSerieActivity : AppCompatActivity() {
                         )
                         firestore.collection("tvserie").add(newTvserie)
                             .addOnSuccessListener { documentReference ->
-                                Toast.makeText(
-                                    this,
-                                    "¡Serie de TV agregada con el id: ${documentReference.id}",
-                                    Toast.LENGTH_SHORT
-                                ).show()
+                                toastCorrecto("¡Serie de TV agregada con el id: ${documentReference.id}!")
                                 limpiarCampos()
                             }
                             .addOnFailureListener {
-                                Toast.makeText(
-                                    this,
-                                    "¡Ocurrió un error al registrar la serie de TV!",
-                                    Toast.LENGTH_SHORT
-                                ).show()
+                                toastError("¡Ocurrió un error al registrar la serie de TV!")
                             }
                     }
                 }
             }
         } else {
-            SweetAlertDialog(this, SweetAlertDialog.ERROR_TYPE)
-                .setTitleText("¡Error!")
-                .setContentText("Por favor, completa todos los campos.")
-                .setConfirmText("Cerrar")
-                .show()
+            toastError("¡Por favor, completa todos los campos!")
         }
     }
 
@@ -164,9 +154,35 @@ class AddTVSerieActivity : AppCompatActivity() {
                 imagePickerIntent.type = "image/*"
                 startActivityForResult(imagePickerIntent, IMAGE_PICKER_REQUEST_CODE)
             } else {
-                Toast.makeText(this, "¡Se requiere permiso de lectura para acceder a imágenes!", Toast.LENGTH_SHORT).show()
+                toastError("¡Se requiere permiso de lectura para acceder a las imágenes!")
             }
         }
+    }
+
+    private fun toastCorrecto(mensaje: String) {
+        val layoutInflater = LayoutInflater.from(this)
+        val view = layoutInflater.inflate(R.layout.custom_toast_success, this.findViewById(R.id.toast_success))
+        val tvMensaje = view.findViewById<TextView>(R.id.tvMensajeToast1)
+        tvMensaje.text = mensaje
+
+        val toast = Toast(this)
+        toast.setGravity(Gravity.CENTER_VERTICAL or Gravity.BOTTOM, 0, 200)
+        toast.duration = Toast.LENGTH_SHORT
+        toast.view = view
+        toast.show()
+    }
+
+    private fun toastError(mensaje: String) {
+        val layoutInflater = LayoutInflater.from(this)
+        val view = layoutInflater.inflate(R.layout.custom_toast_error, this.findViewById(R.id.toast_error))
+        val tvMensaje = view.findViewById<TextView>(R.id.tvMensajeToast2)
+        tvMensaje.text = mensaje
+
+        val toast = Toast(this)
+        toast.setGravity(Gravity.CENTER_VERTICAL or Gravity.BOTTOM, 0, 200)
+        toast.duration = Toast.LENGTH_SHORT
+        toast.view = view
+        toast.show()
     }
 
     private fun limpiarCampos() {

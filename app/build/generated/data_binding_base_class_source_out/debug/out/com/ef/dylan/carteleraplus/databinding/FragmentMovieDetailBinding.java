@@ -4,7 +4,6 @@ package com.ef.dylan.carteleraplus.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -13,6 +12,7 @@ import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.ef.dylan.carteleraplus.R;
 import com.google.android.material.button.MaterialButton;
+import com.google.android.material.imageview.ShapeableImageView;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
@@ -28,7 +28,13 @@ public final class FragmentMovieDetailBinding implements ViewBinding {
   public final MaterialButton btnRemoveFavorite;
 
   @NonNull
-  public final ImageView imgDetalleMoviePosterPath;
+  public final ShapeableImageView imgDetalleMoviePosterPath;
+
+  @NonNull
+  public final TextView tvDetalleMovieOriginalLanguage;
+
+  @NonNull
+  public final TextView tvDetalleMovieOverview;
 
   @NonNull
   public final TextView tvDetalleMovieReleaseDate;
@@ -39,22 +45,21 @@ public final class FragmentMovieDetailBinding implements ViewBinding {
   @NonNull
   public final TextView tvDetalleMovieVoteAverage;
 
-  @NonNull
-  public final TextView tvDetallesMovie;
-
   private FragmentMovieDetailBinding(@NonNull ConstraintLayout rootView,
       @NonNull MaterialButton btnAddFavorite, @NonNull MaterialButton btnRemoveFavorite,
-      @NonNull ImageView imgDetalleMoviePosterPath, @NonNull TextView tvDetalleMovieReleaseDate,
-      @NonNull TextView tvDetalleMovieTitle, @NonNull TextView tvDetalleMovieVoteAverage,
-      @NonNull TextView tvDetallesMovie) {
+      @NonNull ShapeableImageView imgDetalleMoviePosterPath,
+      @NonNull TextView tvDetalleMovieOriginalLanguage, @NonNull TextView tvDetalleMovieOverview,
+      @NonNull TextView tvDetalleMovieReleaseDate, @NonNull TextView tvDetalleMovieTitle,
+      @NonNull TextView tvDetalleMovieVoteAverage) {
     this.rootView = rootView;
     this.btnAddFavorite = btnAddFavorite;
     this.btnRemoveFavorite = btnRemoveFavorite;
     this.imgDetalleMoviePosterPath = imgDetalleMoviePosterPath;
+    this.tvDetalleMovieOriginalLanguage = tvDetalleMovieOriginalLanguage;
+    this.tvDetalleMovieOverview = tvDetalleMovieOverview;
     this.tvDetalleMovieReleaseDate = tvDetalleMovieReleaseDate;
     this.tvDetalleMovieTitle = tvDetalleMovieTitle;
     this.tvDetalleMovieVoteAverage = tvDetalleMovieVoteAverage;
-    this.tvDetallesMovie = tvDetallesMovie;
   }
 
   @Override
@@ -97,8 +102,20 @@ public final class FragmentMovieDetailBinding implements ViewBinding {
       }
 
       id = R.id.imgDetalleMoviePosterPath;
-      ImageView imgDetalleMoviePosterPath = ViewBindings.findChildViewById(rootView, id);
+      ShapeableImageView imgDetalleMoviePosterPath = ViewBindings.findChildViewById(rootView, id);
       if (imgDetalleMoviePosterPath == null) {
+        break missingId;
+      }
+
+      id = R.id.tvDetalleMovieOriginalLanguage;
+      TextView tvDetalleMovieOriginalLanguage = ViewBindings.findChildViewById(rootView, id);
+      if (tvDetalleMovieOriginalLanguage == null) {
+        break missingId;
+      }
+
+      id = R.id.tvDetalleMovieOverview;
+      TextView tvDetalleMovieOverview = ViewBindings.findChildViewById(rootView, id);
+      if (tvDetalleMovieOverview == null) {
         break missingId;
       }
 
@@ -120,15 +137,10 @@ public final class FragmentMovieDetailBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.tvDetallesMovie;
-      TextView tvDetallesMovie = ViewBindings.findChildViewById(rootView, id);
-      if (tvDetallesMovie == null) {
-        break missingId;
-      }
-
       return new FragmentMovieDetailBinding((ConstraintLayout) rootView, btnAddFavorite,
-          btnRemoveFavorite, imgDetalleMoviePosterPath, tvDetalleMovieReleaseDate,
-          tvDetalleMovieTitle, tvDetalleMovieVoteAverage, tvDetallesMovie);
+          btnRemoveFavorite, imgDetalleMoviePosterPath, tvDetalleMovieOriginalLanguage,
+          tvDetalleMovieOverview, tvDetalleMovieReleaseDate, tvDetalleMovieTitle,
+          tvDetalleMovieVoteAverage);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

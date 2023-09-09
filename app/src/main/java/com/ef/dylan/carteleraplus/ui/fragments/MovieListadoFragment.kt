@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.GridLayoutManager
 import com.ef.dylan.carteleraplus.R
 import com.ef.dylan.carteleraplus.databinding.FragmentMovieListadoBinding
 import com.ef.dylan.carteleraplus.ui.adapter.RVMovieListAdapter
@@ -37,6 +38,7 @@ class MovieListadoFragment : Fragment() {
             val destination = MovieListadoFragmentDirections.actionMovieListadoFragmentToMovieDetailFragment(movie)
             findNavController().navigate(destination)
         }
+        binding.rvMovieList.layoutManager = GridLayoutManager(binding.root.context, 2)
         binding.rvMovieList.adapter = adapter
         viewModel.movies.observe(this) { movies ->
             movies?.let {

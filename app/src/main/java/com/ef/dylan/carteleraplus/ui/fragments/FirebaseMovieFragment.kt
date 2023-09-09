@@ -6,10 +6,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
-import com.ef.dylan.carteleraplus.R
+import androidx.recyclerview.widget.GridLayoutManager
 import com.ef.dylan.carteleraplus.databinding.FragmentFirebaseMovieBinding
 import com.ef.dylan.carteleraplus.model.TVSerie
 import com.ef.dylan.carteleraplus.ui.AddTVSerieActivity
@@ -44,6 +43,7 @@ class FirebaseMovieFragment : Fragment() {
             val destination = FirebaseMovieFragmentDirections.actionFirebaseMovieFragmentToTVSerieDetailFragment(tvserie)
             findNavController().navigate(destination)
         }
+        binding.rvTvserieList.layoutManager = GridLayoutManager(binding.root.context, 2)
         binding.rvTvserieList.adapter = adapter
         viewModel.getTVSerieList().addOnSuccessListener { querySnapshot ->
             val serieList = mutableListOf<TVSerie>()
